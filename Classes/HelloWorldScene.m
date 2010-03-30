@@ -47,8 +47,7 @@
     }
     
     for (int number=0; number<count; number++) {
-      int rand = CCRANDOM_0_1() * [positions count];
-      NSLog([NSString stringWithFormat:@"rand:%d", rand]);
+      int rand = arc4random() % [positions count];
       Position *position = [positions objectAtIndex:rand];
       [positions removeObjectAtIndex:rand];
       Ball *ball = [Ball withLabel:number AtLeftIndex:position.left AndRightIndex:position.right];
