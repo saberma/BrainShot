@@ -44,7 +44,7 @@
 	// before creating any layer, set the landscape mode
 	[[CCDirector sharedDirector] setDeviceOrientation:CCDeviceOrientationLandscapeLeft];
 	[[CCDirector sharedDirector] setAnimationInterval:1.0/60];
-	[[CCDirector sharedDirector] setDisplayFPS:YES];
+	[[CCDirector sharedDirector] setDisplayFPS:NO];
 	
 	// create an openGL view inside a window
 	[[CCDirector sharedDirector] attachInView:window];	

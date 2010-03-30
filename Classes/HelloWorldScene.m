@@ -5,8 +5,6 @@
 
 // Import the interfaces
 #import "HelloWorldScene.h"
-#import "Ball.h"
-
 // HelloWorld implementation
 @implementation HelloWorld
 
@@ -36,18 +34,25 @@
 
 		// ask director the the window size
 		//CGSize size = [[CCDirector sharedDirector] winSize];
-		
-    int sum = 0;
-    
     NSMutableArray *tmpBalls = [[NSMutableArray alloc] init];
+    NSMutableArray *positions = [[NSMutableArray alloc] init];
+    
+    int count = 60;
     
     for (int left=0; left<10; left++) {
       for (int right=0; right<6; right++) {
-        sum++;
-        Ball *ball = [Ball withLabel:sum AtLeftIndex:left AndRightIndex:right];
-        [tmpBalls addObject:ball];
-        [self addChild:ball];
+        Position *position = [Position atLeft:left andRight:right];
+        [positions addObject:position];
       }
+    }
+    
+    for (int number=0; number<count; number++) {
+      int rand = CCRANDOM_0_1() * [positions count];
+      Position *position = [positions objectAtIndex:rand];
+      [positions removeObjectAtIndex:rand];
+      Ball *ball = [Ball withLabel:number AtLeftIndex:position.left AndRightIndex:position.right];
+      [tmpBalls addObject:ball];
+      [self addChild:ball];
     }
     [self setBalls:tmpBalls];
     [tmpBalls release];
@@ -55,6 +60,11 @@
     [self schedule:@selector(hide:) interval:1.0f];
 	}
 	return self;
+}
+
+-(int) getRandomPosition:(int)max 
+{
+	return CCRANDOM_0_1() * max;
 }
 
 -(void) hide: (ccTime) dt
