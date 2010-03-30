@@ -21,5 +21,7 @@
 
 + (Ball *)withLabel:(int)number AtLeftIndex:(int)leftIndex AndRightIndex:(int)rightIndex;
 
+- (void)hide;
+- (void)show;
 
 @end

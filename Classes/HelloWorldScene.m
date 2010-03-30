@@ -10,6 +10,8 @@
 // HelloWorld implementation
 @implementation HelloWorld
 
+@synthesize balls;
+
 +(id) scene
 {
 	// 'scene' is an autorelease object.
@@ -36,22 +38,31 @@
 		//CGSize size = [[CCDirector sharedDirector] winSize];
 		
     int sum = 0;
+    
+    NSMutableArray *tmpBalls = [[NSMutableArray alloc] init];
+    
     for (int left=0; left<10; left++) {
       for (int right=0; right<6; right++) {
         sum++;
         Ball *ball = [Ball withLabel:sum AtLeftIndex:left AndRightIndex:right];
+        [tmpBalls addObject:ball];
         [self addChild:ball];
       }
     }
+    [self setBalls:tmpBalls];
+    [tmpBalls release];
     
-    //[self schedule:@selector(hideNumber:)];
+    [self schedule:@selector(hide:) interval:1.0f];
 	}
 	return self;
 }
 
--(void) hideNumber:(ccTime)dt
+-(void) hide: (ccTime) dt
 {
-  //NSLog(@"hide");
+  [self unschedule:_cmd];
+  for (Ball *ball in self.balls) {
+    [ball hide];
+  }
 }
 
 // on "dealloc" you need to release all your retained objects

@@ -20,7 +20,7 @@
   int right = rightIndex * ballSize + ballSize/2; 
   
   Ball *ball = [Ball spriteWithFile:@"circle_green.png"];
-  ball.position =  ccp( left , right );
+  ball.position =  ccp( left , right + 10 );
   
   // create and initialize a Label
   CCLabel* label = [CCLabel labelWithString:[NSString stringWithFormat:@"%d", number] fontName:@"Marker Felt" fontSize:32];
@@ -60,10 +60,20 @@
 {
 	if ( ![self containsTouchLocation:touch] ) return NO;
   
-  id flip = [CCFlipX3D actionWithDuration:0.5];
-  [self runAction:flip];
-  NSLog([NSString stringWithFormat:@"touch:%d", [self number]]);
-	return YES;
+  [self show];
+	return NO;
+}
+
+- (void)show
+{
+  id show = [CCShow action];
+  [[self.children objectAtIndex:0] runAction:show];
+}
+
+- (void)hide
+{
+  id hide = [CCHide action];
+  [[self.children objectAtIndex:0] runAction:hide];
 }
 
 @end
