@@ -24,4 +24,6 @@
 - (void)hide;
 - (void)show;
 
+- (void)check;
+
 @end

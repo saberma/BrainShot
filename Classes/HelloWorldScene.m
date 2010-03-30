@@ -37,7 +37,7 @@
     NSMutableArray *tmpBalls = [[NSMutableArray alloc] init];
     NSMutableArray *positions = [[NSMutableArray alloc] init];
     
-    int count = 60;
+    int count = 5;
     
     for (int left=0; left<10; left++) {
       for (int right=0; right<6; right++) {
@@ -48,6 +48,7 @@
     
     for (int number=0; number<count; number++) {
       int rand = CCRANDOM_0_1() * [positions count];
+      NSLog([NSString stringWithFormat:@"rand:%d", rand]);
       Position *position = [positions objectAtIndex:rand];
       [positions removeObjectAtIndex:rand];
       Ball *ball = [Ball withLabel:number AtLeftIndex:position.left AndRightIndex:position.right];
@@ -60,11 +61,6 @@
     [self schedule:@selector(hide:) interval:1.0f];
 	}
 	return self;
-}
-
--(int) getRandomPosition:(int)max 
-{
-	return CCRANDOM_0_1() * max;
 }
 
 -(void) hide: (ccTime) dt

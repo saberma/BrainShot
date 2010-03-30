@@ -9,6 +9,7 @@
 #import "Ball.h"
 #import "cocos2d.h"
 
+static int clicked;
 
 @implementation Ball
 
@@ -61,6 +62,8 @@
 	if ( ![self containsTouchLocation:touch] ) return NO;
   
   [self show];
+  [self check];
+  
 	return NO;
 }
 
@@ -74,6 +77,17 @@
 {
   id hide = [CCHide action];
   [[self.children objectAtIndex:0] runAction:hide];
+}
+
+- (void)check
+{
+  if (clicked == [self number]) {
+    NSLog(@"right");
+  } else {
+    [[self.children objectAtIndex:0] setColor:[UIColor redColor]];
+    NSLog(@"wrong");
+  }
+  clicked++;
 }
 
 @end
