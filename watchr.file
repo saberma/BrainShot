@@ -1,0 +1,4 @@
+watch( '.*/.*\.m' )  do 
+  system('PATH=../../toolchain/pre/bin/:$PATH make deploy')
+  p "########## finished deploy ##########"
+end
