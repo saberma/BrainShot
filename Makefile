@@ -1,6 +1,6 @@
 # Makefile for iPhone Application for Xcode gcc compiler (SDK Headers)
 
-PROJECTNAME=iphone
+PROJECTNAME=BrainShot
 APPFOLDER=$(PROJECTNAME).app
 INSTALLFOLDER=$(PROJECTNAME).app
 
@@ -15,28 +15,36 @@ LDFLAGS=	-lobjc \
 		-framework CoreFoundation \
 		-framework UIKit \
 		-framework CoreGraphics \
-		-lsqlite3.0 \
+		-framework OpenGLES \
+		-framework QuartzCore \
+		-framework OpenAL \
+		-framework AudioToolbox \
+		-framework AVFoundation \
+		-lz \
+		#-lsqlite3.0 \
 		-w
 #LDFLAGS += -framework AddressBookUI
 #LDFLAGS += -framework AddressBook
-#LDFLAGS += -framework QuartzCore
 #LDFLAGS += -framework CoreAudio
-#LDFLAGS += -framework AudioToolbox
 #LDFLAGS += -framework SystemConfiguration
 #LDFLAGS += -framework CFNetwork
 #LDFLAGS += -framework MediaPlayer
 
 CFLAGS = -DDEBUG -std=c99
 #TODO:how to make it search subdir
-CFLAGS += -I./Classes/ObjectiveResource
-CFLAGS += -I./Classes/ObjectiveResource/objective_support/Core
-CFLAGS += -I./Classes/ObjectiveResource/objective_support/Core/Inflections
-CFLAGS += -I./Classes/ObjectiveResource/objective_support/Serialization
-CFLAGS += -I./Classes/ObjectiveResource/objective_support/Serialization/XML
-CFLAGS += -I./Classes/ObjectiveResource/objective_support/Serialization/JSON
-CFLAGS += -I./Classes/ObjectiveResource/objective_support/json-framework
-CFLAGS += -I./Classes/SQLPO
-CFLAGS += -I./Classes/Models
+CFLAGS += -I./Classes/
+CFLAGS += -I./libs/FontLabel/
+CFLAGS += -I./libs/cocos2d/
+CFLAGS += -I./libs/cocos2d/Support
+#CFLAGS += -I./Classes/ObjectiveResource
+#CFLAGS += -I./Classes/ObjectiveResource/objective_support/Core
+#CFLAGS += -I./Classes/ObjectiveResource/objective_support/Core/Inflections
+#CFLAGS += -I./Classes/ObjectiveResource/objective_support/Serialization
+#CFLAGS += -I./Classes/ObjectiveResource/objective_support/Serialization/XML
+#CFLAGS += -I./Classes/ObjectiveResource/objective_support/Serialization/JSON
+#CFLAGS += -I./Classes/ObjectiveResource/objective_support/json-framework
+#CFLAGS += -I./Classes/SQLPO
+#CFLAGS += -I./Classes/Models
 
 #一定要引入pre-compiled header，否则每个source要手动引入Foundation/Foundation.h
 CFLAGS += -include ./*_Prefix.pch
@@ -46,6 +54,7 @@ CFLAGS += -include ./*_Prefix.pch
 
 BUILDDIR=./build
 SRCDIR=./Classes
+LIBDIR=./libs
 RESDIR=./Resources
 OBJS=$(patsubst %.m,%.o,$(wildcard $(SRCDIR)/*.m))
 OBJS+=$(patsubst %.m,%.o,$(wildcard $(SRCDIR)/**/*.m))
@@ -53,7 +62,10 @@ OBJS+=$(patsubst %.m,%.o,$(wildcard $(SRCDIR)/**/**/*.m))
 OBJS+=$(patsubst %.m,%.o,$(wildcard $(SRCDIR)/**/**/**/*.m))
 OBJS+=$(patsubst %.m,%.o,$(wildcard $(SRCDIR)/**/**/**/**/*.m))
 OBJS+=$(patsubst %.m,%.o,$(wildcard $(SRCDIR)/**/**/**/**/**/*.m))
-OBJS+=$(patsubst %.c,%.o,$(wildcard $(SRCDIR)/**/*.c))
+OBJS+=$(patsubst %.m,%.o,$(wildcard $(LIBDIR)/FontLabel/*.m))
+OBJS+=$(patsubst %.m,%.o,$(wildcard $(LIBDIR)/cocos2d/*.m))
+OBJS+=$(patsubst %.m,%.o,$(wildcard $(LIBDIR)/cocos2d/Support/*.m))
+OBJS+=$(patsubst %.c,%.o,$(wildcard $(LIBDIR)/cocos2d/Support/*.c))
 #指定根目录下的main.m，否则会出现编译MakeFile.o
 OBJS+=$(patsubst %.m,%.o,$(wildcard *.m))
 RESOURCES=$(wildcard $(RESDIR)/*)
@@ -71,11 +83,18 @@ bundle:	$(PROJECTNAME)
 	@cat toolchain.sh | sed 's/$${PRODUCT_NAME.*}/$(PROJECTNAME)/' > $(BUILDDIR)/$(APPFOLDER)/$(PROJECTNAME)
 	@chmod +x $(BUILDDIR)/$(APPFOLDER)/$(PROJECTNAME)
 	@#替换Info.plist中的变量
-	@cat $(PROJECTNAME)-Info.plist | sed 's/$${PRODUCT_NAME.*}/$(PROJECTNAME)/' | sed 's/$${EXECUTABLE_NAME}/$(PROJECTNAME)/' >  $(BUILDDIR)/$(APPFOLDER)/Info.plist
+	@if test -e $(PROJECTNAME)-Info.plist;\
+	then cat $(PROJECTNAME)-Info.plist | sed 's/$${PRODUCT_NAME.*}/$(PROJECTNAME)/' | sed 's/$${EXECUTABLE_NAME}/$(PROJECTNAME)/' >  $(BUILDDIR)/$(APPFOLDER)/Info.plist; \
+	else cat $(RESDIR)/Info.plist | sed 's/$${PRODUCT_NAME.*}/$(PROJECTNAME)/' | sed 's/$${EXECUTABLE_NAME}/$(PROJECTNAME)/' >  $(BUILDDIR)/$(APPFOLDER)/Info.plist; \
+	fi
 	@echo "APPL????" > $(BUILDDIR)/$(APPFOLDER)/PkgInfo
 
 main.o:	main.m
 	$(CC) -c $< -o $@
+
+%.o:	%.c
+	$(CC) -c $(CFLAGS) $< -o $@
+
 
 %.o:	%.m
 	$(CC) -c $(CFLAGS) $< -o $@
