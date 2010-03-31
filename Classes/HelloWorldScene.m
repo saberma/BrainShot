@@ -45,7 +45,7 @@
     [self setPositions:tmpPositions];
     [tmpPositions release];
     
-    [self setLevel:5];
+    [self setLevel:1];
     [self start];
 	}
 	return self;
@@ -54,6 +54,8 @@
 -(void) start
 {
   [self removeAllChildrenWithCleanup:YES];
+  [Ball clearClicked];
+
   NSMutableArray *tmpBalls = [[NSMutableArray alloc] init];
   NSMutableArray *tmpPositions = [self.positions mutableCopy];
 
@@ -96,6 +98,9 @@
       [otherBall show];
       [self schedule:@selector(restart:) interval:1.0f];
     }
+  }else if ([ball number] == (level - 1)){
+    level++;
+    [self start];
   }
 }
 
@@ -107,6 +112,9 @@
 	// cocos2d will automatically release all the children (Label)
 	
 	// don't forget to call "super dealloc"
+  [balls release];
+  [positions release];
+
 	[super dealloc];
 }
 @end

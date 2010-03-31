@@ -15,6 +15,11 @@ static int clicked;
 
 @synthesize number, delegate;
 
++ (void)clearClicked
+{
+  clicked = 0;
+}
+
 + (Ball *)withLabel:(int)number AtLeftIndex:(int)leftIndex AndRightIndex:(int)rightIndex
 {
   int left = leftIndex * ballSize + ballSize/2;

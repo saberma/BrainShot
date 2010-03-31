@@ -23,6 +23,7 @@
 @property(nonatomic, retain) id <BallDelegate> delegate;
 
 + (Ball *)withLabel:(int)number AtLeftIndex:(int)leftIndex AndRightIndex:(int)rightIndex;
++ (void)clearClicked;
 
 - (void)hide;
 - (void)show;
