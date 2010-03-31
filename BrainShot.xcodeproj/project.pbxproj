@@ -31,6 +31,9 @@
 		2F7DEDD611639134004E947B /* UIImage-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7DEDC611639134004E947B /* UIImage-SQLitePersistence.m */; };
 		2F7DEDE2116391C8004E947B /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7DEDE1116391C8004E947B /* Level.m */; };
 		2F7DEE13116397F1004E947B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7DEE12116397F1004E947B /* libsqlite3.0.dylib */; };
+		2F7DEE4211639D21004E947B /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7DEE4011639D21004E947B /* fail.png */; };
+		2F7DEE4311639D21004E947B /* pass.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7DEE4111639D21004E947B /* pass.png */; };
+		2F7DEE5711639E6A004E947B /* ScoreLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7DEE5611639E6A004E947B /* ScoreLayer.m */; };
 		502BC35D1120837500A0B92A /* CDAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 502BC3551120837500A0B92A /* CDAudioManager.h */; };
 		502BC35E1120837500A0B92A /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 502BC3561120837500A0B92A /* CDAudioManager.m */; };
 		502BC35F1120837500A0B92A /* CDConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 502BC3571120837500A0B92A /* CDConfig.h */; };
@@ -293,6 +296,10 @@
 		2F7DEDE0116391C8004E947B /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		2F7DEDE1116391C8004E947B /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		2F7DEE12116397F1004E947B /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		2F7DEE4011639D21004E947B /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fail.png; sourceTree = "<group>"; };
+		2F7DEE4111639D21004E947B /* pass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass.png; sourceTree = "<group>"; };
+		2F7DEE5511639E6A004E947B /* ScoreLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreLayer.h; sourceTree = "<group>"; };
+		2F7DEE5611639E6A004E947B /* ScoreLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreLayer.m; sourceTree = "<group>"; };
 		502BC3551120837500A0B92A /* CDAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAudioManager.h; sourceTree = "<group>"; };
 		502BC3561120837500A0B92A /* CDAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAudioManager.m; sourceTree = "<group>"; };
 		502BC3571120837500A0B92A /* CDConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDConfig.h; sourceTree = "<group>"; };
@@ -595,6 +602,8 @@
 				2F6DFD72116241200078600F /* Position.m */,
 				2F7DECF21163878C004E947B /* LevelScene.h */,
 				2F7DECF31163878C004E947B /* LevelScene.m */,
+				2F7DEE5511639E6A004E947B /* ScoreLayer.h */,
+				2F7DEE5611639E6A004E947B /* ScoreLayer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -907,6 +916,8 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2F7DEE4011639D21004E947B /* fail.png */,
+				2F7DEE4111639D21004E947B /* pass.png */,
 				2F07E1771160DADC0064F846 /* circle_green.png */,
 				50F414EC1069373D002A0D5E /* Default.png */,
 				50F414ED1069373D002A0D5E /* fps_images.png */,
@@ -1087,6 +1098,8 @@
 				50F414F11069373D002A0D5E /* fps_images.png in Resources */,
 				50F414F21069373D002A0D5E /* Icon.png in Resources */,
 				2F07E1781160DADC0064F846 /* circle_green.png in Resources */,
+				2F7DEE4211639D21004E947B /* fail.png in Resources */,
+				2F7DEE4311639D21004E947B /* pass.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1120,6 +1133,7 @@
 				2F7DEDD511639134004E947B /* UIColor-SQLitePersistentObject.m in Sources */,
 				2F7DEDD611639134004E947B /* UIImage-SQLitePersistence.m in Sources */,
 				2F7DEDE2116391C8004E947B /* Level.m in Sources */,
+				2F7DEE5711639E6A004E947B /* ScoreLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

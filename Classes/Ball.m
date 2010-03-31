@@ -86,11 +86,9 @@ static int clicked;
 - (BOOL)clickCorrect
 {
   if (clicked++ == [self number]) {
-    NSLog(@"right");
     return true;
   } else {
-    [[self.children objectAtIndex:0] setColor:UIColor.redColor];
-    NSLog(@"wrong");
+    [[self.children objectAtIndex:0] setColor:UIColor.redColor];    
     return false;
   }
 }

@@ -5,6 +5,7 @@
 #import "Ball.h"
 #import "Position.h"
 #import "Level.h"
+#import "ScoreLayer.h"
 
 
 // HelloWorld Layer
@@ -26,5 +27,6 @@
 
 -(void) hide: (ccTime) dt;
 -(void) restart: (ccTime) dt;
+-(void) nextLevel: (ccTime) dt;
 
 @end

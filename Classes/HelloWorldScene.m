@@ -17,9 +17,11 @@
 	
 	// 'layer' is an autorelease object.
 	HelloWorld *layer = [HelloWorld node];
+	ScoreLayer *scoreLayer = [ScoreLayer node];
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
+	[scene addChild: scoreLayer];
 	
 	// return the scene
 	return scene;
@@ -92,19 +94,36 @@
   [levelScene release];
 }
 
+-(void) nextLevel: (ccTime) dt
+{
+  [self unschedule:_cmd];
+  LevelScene *levelScene = [[LevelScene alloc] init];
+  [[CCDirector sharedDirector] replaceScene: levelScene];
+  [levelScene release];
+}
+
 - (void)click: (Ball *) ball
 {
   [ball show];
   if (! [ball clickCorrect]) {
     for (Ball *otherBall in self.balls) {
       [otherBall show];
+      
+      CCSprite *fail = [CCSprite spriteWithFile:@"fail.png"];
+      CGSize size = [[CCDirector sharedDirector] winSize];
+      fail.position = ccp(size.width/2, size.height/2);
+      [self addChild:fail];
+      
       [self schedule:@selector(restart:) interval:1.0f];
     }
   }else if ([ball number] == ([Level current] - 1)){
+    CCSprite *pass = [CCSprite spriteWithFile:@"pass.png"];
+    CGSize size = [[CCDirector sharedDirector] winSize];
+    pass.position = ccp(size.width/2, size.height/2);
+    [self addChild:pass];
+    
     [Level increment];
-    LevelScene *levelScene = [[LevelScene alloc] init];
-    [[CCDirector sharedDirector] replaceScene: levelScene];
-    [levelScene release];
+    [self schedule:@selector(nextLevel:) interval:1.0f];
   }
 }
 
