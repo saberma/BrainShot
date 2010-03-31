@@ -13,7 +13,7 @@ static int clicked;
 
 @implementation Ball
 
-@synthesize number;
+@synthesize number, delegate;
 
 + (Ball *)withLabel:(int)number AtLeftIndex:(int)leftIndex AndRightIndex:(int)rightIndex
 {
@@ -30,7 +30,7 @@ static int clicked;
   
   [ball setNumber:number];
   [ball addChild:label];
-  
+   
   return ball;
 }
 
@@ -61,8 +61,7 @@ static int clicked;
 {
 	if ( ![self containsTouchLocation:touch] ) return NO;
   
-  [self show];
-  [self check];
+  [self.delegate click:self];
   
 	return NO;
 }
@@ -79,15 +78,16 @@ static int clicked;
   [[self.children objectAtIndex:0] runAction:hide];
 }
 
-- (void)check
+- (BOOL)clickCorrect
 {
-  if (clicked == [self number]) {
+  if (clicked++ == [self number]) {
     NSLog(@"right");
+    return true;
   } else {
     [[self.children objectAtIndex:0] setColor:UIColor.redColor];
     NSLog(@"wrong");
+    return false;
   }
-  clicked++;
 }
 
 @end

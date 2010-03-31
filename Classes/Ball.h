@@ -11,19 +11,26 @@
 
 #define ballSize 48
 
+@protocol BallDelegate;
 
 @interface Ball : CCSprite <CCTargetedTouchDelegate> {
   int number;
+  id <BallDelegate> delegate;
 }
 
 @property (nonatomic) int number;
 @property(nonatomic, readonly) CGRect rect;
+@property(nonatomic, retain) id <BallDelegate> delegate;
 
 + (Ball *)withLabel:(int)number AtLeftIndex:(int)leftIndex AndRightIndex:(int)rightIndex;
 
 - (void)hide;
 - (void)show;
 
-- (void)check;
+- (BOOL)clickCorrect;
 
+@end
+
+@protocol BallDelegate <NSObject>
+- (void)click:(Ball *) ball;
 @end

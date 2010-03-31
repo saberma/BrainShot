@@ -51,6 +51,7 @@
       Position *position = [positions objectAtIndex:rand];
       [positions removeObjectAtIndex:rand];
       Ball *ball = [Ball withLabel:number AtLeftIndex:position.left AndRightIndex:position.right];
+      [ball setDelegate:self];
       [tmpBalls addObject:ball];
       [self addChild:ball];
     }
@@ -67,6 +68,16 @@
   [self unschedule:_cmd];
   for (Ball *ball in self.balls) {
     [ball hide];
+  }
+}
+
+- (void)click: (Ball *) ball
+{
+  [ball show];
+  if (! [ball clickCorrect]) {
+    for (Ball *otherBall in self.balls) {
+      [otherBall show];
+    }
   }
 }
 

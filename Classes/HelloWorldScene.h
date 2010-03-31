@@ -6,7 +6,7 @@
 
 
 // HelloWorld Layer
-@interface HelloWorld : CCLayer
+@interface HelloWorld : CCLayer < BallDelegate >
 {
   NSMutableArray *balls;
 }
