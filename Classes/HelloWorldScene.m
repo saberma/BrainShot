@@ -8,7 +8,7 @@
 // HelloWorld implementation
 @implementation HelloWorld
 
-@synthesize balls;
+@synthesize balls, positions, level;
 
 +(id) scene
 {
@@ -34,33 +34,44 @@
 
 		// ask director the the window size
 		//CGSize size = [[CCDirector sharedDirector] winSize];
-    NSMutableArray *tmpBalls = [[NSMutableArray alloc] init];
-    NSMutableArray *positions = [[NSMutableArray alloc] init];
     
-    int count = 5;
-    
+    NSMutableArray *tmpPositions = [[NSMutableArray alloc] init];
     for (int left=0; left<10; left++) {
       for (int right=0; right<6; right++) {
         Position *position = [Position atLeft:left andRight:right];
-        [positions addObject:position];
+        [tmpPositions addObject:position];
       }
     }
+    [self setPositions:tmpPositions];
+    [tmpPositions release];
     
-    for (int number=0; number<count; number++) {
-      int rand = arc4random() % [positions count];
-      Position *position = [positions objectAtIndex:rand];
-      [positions removeObjectAtIndex:rand];
-      Ball *ball = [Ball withLabel:number AtLeftIndex:position.left AndRightIndex:position.right];
-      [ball setDelegate:self];
-      [tmpBalls addObject:ball];
-      [self addChild:ball];
-    }
-    [self setBalls:tmpBalls];
-    [tmpBalls release];
-    
-    [self schedule:@selector(hide:) interval:1.0f];
+    [self setLevel:5];
+    [self start];
 	}
 	return self;
+}
+
+-(void) start
+{
+  [self removeAllChildrenWithCleanup:YES];
+  NSMutableArray *tmpBalls = [[NSMutableArray alloc] init];
+  NSMutableArray *tmpPositions = [self.positions mutableCopy];
+
+  for (int number=0; number<self.level; number++) {
+    int rand = arc4random() % [tmpPositions count];
+    Position *position = [tmpPositions objectAtIndex:rand];
+    [tmpPositions removeObjectAtIndex:rand];
+    Ball *ball = [Ball withLabel:number AtLeftIndex:position.left AndRightIndex:position.right];
+    [ball setDelegate:self];
+    [tmpBalls addObject:ball];
+    [self addChild:ball];
+  }
+  [self setBalls:tmpBalls];
+
+  [tmpPositions release];
+  [tmpBalls release];
+    
+  [self schedule:@selector(hide:) interval:1.0f];
 }
 
 -(void) hide: (ccTime) dt
@@ -71,12 +82,19 @@
   }
 }
 
+-(void) restart: (ccTime) dt
+{
+  [self unschedule:_cmd];
+  [self start];
+}
+
 - (void)click: (Ball *) ball
 {
   [ball show];
   if (! [ball clickCorrect]) {
     for (Ball *otherBall in self.balls) {
       [otherBall show];
+      [self schedule:@selector(restart:) interval:1.0f];
     }
   }
 }
