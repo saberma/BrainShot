@@ -1,8 +1,10 @@
 
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
+#import "LevelScene.h"
 #import "Ball.h"
 #import "Position.h"
+#import "Level.h"
 
 
 // HelloWorld Layer

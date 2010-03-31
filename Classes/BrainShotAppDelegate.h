@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "cocos2d.h"
+#import "HelloWorldScene.h"
+#import "LevelScene.h"
 
 @interface BrainShotAppDelegate : NSObject <UIApplicationDelegate> {
 	UIWindow *window;

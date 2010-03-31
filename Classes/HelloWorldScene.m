@@ -59,7 +59,7 @@
   NSMutableArray *tmpBalls = [[NSMutableArray alloc] init];
   NSMutableArray *tmpPositions = [self.positions mutableCopy];
 
-  for (int number=0; number<self.level; number++) {
+  for (int number=0; number<[Level current]; number++) {
     int rand = arc4random() % [tmpPositions count];
     Position *position = [tmpPositions objectAtIndex:rand];
     [tmpPositions removeObjectAtIndex:rand];
@@ -87,7 +87,9 @@
 -(void) restart: (ccTime) dt
 {
   [self unschedule:_cmd];
-  [self start];
+  LevelScene *levelScene = [[LevelScene alloc] init];
+  [[CCDirector sharedDirector] replaceScene: levelScene];
+  [levelScene release];
 }
 
 - (void)click: (Ball *) ball
@@ -98,9 +100,11 @@
       [otherBall show];
       [self schedule:@selector(restart:) interval:1.0f];
     }
-  }else if ([ball number] == (level - 1)){
-    level++;
-    [self start];
+  }else if ([ball number] == ([Level current] - 1)){
+    [Level increment];
+    LevelScene *levelScene = [[LevelScene alloc] init];
+    [[CCDirector sharedDirector] replaceScene: levelScene];
+    [levelScene release];
   }
 }
 

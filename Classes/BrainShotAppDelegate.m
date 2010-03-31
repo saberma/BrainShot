@@ -7,8 +7,6 @@
 //
 
 #import "BrainShotAppDelegate.h"
-#import "cocos2d.h"
-#import "HelloWorldScene.h"
 
 @implementation BrainShotAppDelegate
 
@@ -50,7 +48,9 @@
 	[[CCDirector sharedDirector] attachInView:window];	
 	[window makeKeyAndVisible];		
 		
-	[[CCDirector sharedDirector] runWithScene: [HelloWorld scene]];
+  LevelScene *levelScene = [[LevelScene alloc] init];
+	[[CCDirector sharedDirector] runWithScene: levelScene];
+  [levelScene release];
 }
 
 
