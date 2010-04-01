@@ -75,7 +75,7 @@
   [tmpPositions release];
   [tmpBalls release];
     
-  [self schedule:@selector(hide:) interval:1.0f];
+  [self schedule:@selector(hide:) interval:([Level current] * 0.5f)];
 }
 
 -(void) hide: (ccTime) dt
