@@ -1,31 +1,16 @@
 //
-// cocos2d Hello World example
-// http://www.cocos2d-iphone.org
+//  BallLayer.m
+//  BrainShot
 //
-
+//  Created by  cogent on 10-4-3.
+//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//
 // Import the interfaces
-#import "HelloWorldScene.h"
-// HelloWorld implementation
-@implementation HelloWorld
+#import "BallLayer.h"
+
+@implementation BallLayer
 
 @synthesize balls, positions, level;
-
-+(id) scene
-{
-	// 'scene' is an autorelease object.
-	CCScene *scene = [CCScene node];
-	
-	// 'layer' is an autorelease object.
-	HelloWorld *layer = [HelloWorld node];
-	ScoreLayer *scoreLayer = [ScoreLayer node];
-	
-	// add layer as a child to scene
-	[scene addChild: layer];
-	[scene addChild: scoreLayer];
-	
-	// return the scene
-	return scene;
-}
 
 // on "init" you need to initialize your instance
 -(id) init
@@ -33,7 +18,7 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init] )) {
-
+    
 		// ask director the the window size
 		//CGSize size = [[CCDirector sharedDirector] winSize];
     
@@ -57,10 +42,10 @@
 {
   [self removeAllChildrenWithCleanup:YES];
   [Ball clearClicked];
-
+  
   NSMutableArray *tmpBalls = [[NSMutableArray alloc] init];
   NSMutableArray *tmpPositions = [self.positions mutableCopy];
-
+  
   for (int number=0; number<[Level current]; number++) {
     int rand = arc4random() % [tmpPositions count];
     Position *position = [tmpPositions objectAtIndex:rand];
@@ -71,11 +56,11 @@
     [self addChild:ball];
   }
   [self setBalls:tmpBalls];
-
+  
   [tmpPositions release];
   [tmpBalls release];
-    
-  [self schedule:@selector(hide:) interval:1.0f];
+  
+  [self schedule:@selector(hide:) interval:([Level current]  * 0.7f)];
 }
 
 -(void) hide: (ccTime) dt
@@ -89,17 +74,13 @@
 -(void) restart: (ccTime) dt
 {
   [self unschedule:_cmd];
-  LevelScene *levelScene = [[LevelScene alloc] init];
-  [[CCDirector sharedDirector] replaceScene: levelScene];
-  [levelScene release];
+  [[CCDirector sharedDirector] replaceScene: [LevelScene node]];
 }
 
 -(void) nextLevel: (ccTime) dt
 {
   [self unschedule:_cmd];
-  LevelScene *levelScene = [[LevelScene alloc] init];
-  [[CCDirector sharedDirector] replaceScene: levelScene];
-  [levelScene release];
+  [[CCDirector sharedDirector] replaceScene: [LevelScene node]];
 }
 
 - (void)click: (Ball *) ball
@@ -137,7 +118,7 @@
 	// don't forget to call "super dealloc"
   [balls release];
   [positions release];
-
+  
 	[super dealloc];
 }
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-
+// just for getting random position
 @interface Position : NSObject {
   int left;
   int right;

@@ -7,6 +7,7 @@
 //
 
 #import "LevelScene.h"
+#import "Level.h"
 
 
 @implementation LevelScene
@@ -36,6 +37,6 @@
 
 - (void)finished
 {
-  [[CCDirector sharedDirector] replaceScene:[HelloWorld scene]];
+  [[CCDirector sharedDirector] replaceScene:[BallScene node]];
 }
 @end

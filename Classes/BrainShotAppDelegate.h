@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "cocos2d.h"
-#import "HelloWorldScene.h"
+#import "BallScene.h"
 #import "LevelScene.h"
 
 @interface BrainShotAppDelegate : NSObject <UIApplicationDelegate> {

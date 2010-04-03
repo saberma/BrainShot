@@ -1,15 +1,18 @@
-
-// When you import this file, you import all the cocos2d classes
+//
+//  BallLayer.h
+//  BrainShot
+//
+//  Created by  cogent on 10-4-3.
+//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//
+#import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "LevelScene.h"
 #import "Ball.h"
-#import "Position.h"
-#import "Level.h"
+#import "LevelScene.h"
 #import "ScoreLayer.h"
+#import "Position.h"
 
-
-// HelloWorld Layer
-@interface HelloWorld : CCLayer < BallDelegate >
+@interface BallLayer : CCLayer < BallDelegate >
 {
   NSMutableArray *balls;
   NSArray *positions;
@@ -19,9 +22,6 @@
 @property (nonatomic, retain) NSMutableArray *balls;
 @property (nonatomic, retain) NSArray *positions;
 @property int level;
-
-// returns a Scene that contains the HelloWorld as the only child
-+(id) scene;
 
 -(void) start;
 

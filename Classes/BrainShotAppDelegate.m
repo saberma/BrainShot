@@ -48,10 +48,7 @@
 	[[CCDirector sharedDirector] attachInView:window];	
 	[window makeKeyAndVisible];		
 		
-  LevelScene *levelScene = [[LevelScene alloc] init];
-	[[CCDirector sharedDirector] runWithScene: levelScene];
-  [levelScene release];
-}
+	[[CCDirector sharedDirector] runWithScene: [LevelScene node]];}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
