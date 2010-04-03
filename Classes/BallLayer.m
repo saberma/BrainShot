@@ -69,6 +69,9 @@
   for (Ball *ball in self.balls) {
     [ball hide];
   }
+  for (Ball *ball in self.balls) {
+    [ball setClickable:true];
+  }
 }
 
 -(void) restart: (ccTime) dt

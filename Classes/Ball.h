@@ -16,11 +16,14 @@
 @interface Ball : CCSprite <CCTargetedTouchDelegate> {
   int number;
   id <BallDelegate> delegate;
+  //while ball hide, we can click it
+  BOOL clickable;
 }
 
 @property (nonatomic) int number;
-@property(nonatomic, readonly) CGRect rect;
-@property(nonatomic, retain) id <BallDelegate> delegate;
+@property (nonatomic, readonly) CGRect rect;
+@property (nonatomic, retain) id <BallDelegate> delegate;
+@property BOOL clickable;
 
 + (Ball *)withLabel:(int)number AtLeftIndex:(int)leftIndex AndRightIndex:(int)rightIndex;
 + (void)clearClicked;

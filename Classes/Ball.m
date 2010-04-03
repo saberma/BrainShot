@@ -14,6 +14,7 @@ static int clicked;
 @implementation Ball
 
 @synthesize number, delegate;
+@synthesize clickable;
 
 + (void)clearClicked
 {
@@ -65,6 +66,7 @@ static int clicked;
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
 	if ( ![self containsTouchLocation:touch] ) return NO;
+	if ( ![self clickable] ) return NO;
   
   [self.delegate click:self];
   
@@ -73,6 +75,7 @@ static int clicked;
 
 - (void)show
 {
+  [self setClickable:false];
   id show = [CCShow action];
   [[self.children objectAtIndex:0] runAction:show];
 }
