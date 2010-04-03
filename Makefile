@@ -21,7 +21,7 @@ LDFLAGS=	-lobjc \
 		-framework AudioToolbox \
 		-framework AVFoundation \
 		-lz \
-		#-lsqlite3.0 \
+		-lsqlite3.0 \
 		-w
 #LDFLAGS += -framework AddressBookUI
 #LDFLAGS += -framework AddressBook
@@ -43,8 +43,8 @@ CFLAGS += -I./libs/cocos2d/Support
 #CFLAGS += -I./Classes/ObjectiveResource/objective_support/Serialization/XML
 #CFLAGS += -I./Classes/ObjectiveResource/objective_support/Serialization/JSON
 #CFLAGS += -I./Classes/ObjectiveResource/objective_support/json-framework
-#CFLAGS += -I./Classes/SQLPO
-#CFLAGS += -I./Classes/Models
+CFLAGS += -I./Classes/SQLPO
+CFLAGS += -I./Classes/Models
 
 #一定要引入pre-compiled header，否则每个source要手动引入Foundation/Foundation.h
 CFLAGS += -include ./*_Prefix.pch

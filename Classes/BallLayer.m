@@ -59,7 +59,6 @@
   
   [tmpPositions release];
   [tmpBalls release];
-  
   [self schedule:@selector(hide:) interval:([Level current]  * 0.7f)];
 }
 
