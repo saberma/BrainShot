@@ -27,7 +27,7 @@ static int clicked;
   int right = rightIndex * ballSize + ballSize/2; 
   
   Ball *ball = [Ball spriteWithFile:@"circle_green.png"];
-  ball.position =  ccp( left , right + 10 );
+  ball.position =  ccp( left , right + 2 );
   
   // create and initialize a Label
   CCLabel* label = [CCLabel labelWithString:[NSString stringWithFormat:@"%d", number] fontName:@"Marker Felt" fontSize:32];

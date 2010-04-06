@@ -20,5 +20,7 @@
 + (int)current;
 + (Level *)get;
 + (void)increment;
++ (void)reset;
++ (void)gotoMax;
 
 @end

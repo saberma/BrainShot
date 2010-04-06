@@ -38,6 +38,8 @@
 		2FCCB912116B5B9A0000CC6A /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FCCB911116B5B9A0000CC6A /* click.mp3 */; };
 		2FCCB92C116B6BFE0000CC6A /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FCCB92A116B6BFE0000CC6A /* fail.mp3 */; };
 		2FCCB92D116B6BFE0000CC6A /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FCCB92B116B6BFE0000CC6A /* success.mp3 */; };
+		2FCCB937116B76190000CC6A /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCCB936116B76190000CC6A /* MenuScene.m */; };
+		2FCCB9F3116B7D3E0000CC6A /* MenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCCB9F2116B7D3E0000CC6A /* MenuLayer.m */; };
 		502BC35D1120837500A0B92A /* CDAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 502BC3551120837500A0B92A /* CDAudioManager.h */; };
 		502BC35E1120837500A0B92A /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 502BC3561120837500A0B92A /* CDAudioManager.m */; };
 		502BC35F1120837500A0B92A /* CDConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 502BC3571120837500A0B92A /* CDConfig.h */; };
@@ -309,6 +311,10 @@
 		2FCCB911116B5B9A0000CC6A /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		2FCCB92A116B6BFE0000CC6A /* fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fail.mp3; sourceTree = "<group>"; };
 		2FCCB92B116B6BFE0000CC6A /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
+		2FCCB935116B76190000CC6A /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
+		2FCCB936116B76190000CC6A /* MenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScene.m; sourceTree = "<group>"; };
+		2FCCB9F1116B7D3E0000CC6A /* MenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuLayer.h; sourceTree = "<group>"; };
+		2FCCB9F2116B7D3E0000CC6A /* MenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuLayer.m; sourceTree = "<group>"; };
 		502BC3551120837500A0B92A /* CDAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAudioManager.h; sourceTree = "<group>"; };
 		502BC3561120837500A0B92A /* CDAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAudioManager.m; sourceTree = "<group>"; };
 		502BC3571120837500A0B92A /* CDConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDConfig.h; sourceTree = "<group>"; };
@@ -615,6 +621,10 @@
 				2F7DEE5611639E6A004E947B /* ScoreLayer.m */,
 				2FACE4D411673BE00062B492 /* BallLayer.h */,
 				2FACE4D511673BE00062B492 /* BallLayer.m */,
+				2FCCB935116B76190000CC6A /* MenuScene.h */,
+				2FCCB936116B76190000CC6A /* MenuScene.m */,
+				2FCCB9F1116B7D3E0000CC6A /* MenuLayer.h */,
+				2FCCB9F2116B7D3E0000CC6A /* MenuLayer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1152,6 +1162,8 @@
 				2F7DEDE2116391C8004E947B /* Level.m in Sources */,
 				2F7DEE5711639E6A004E947B /* ScoreLayer.m in Sources */,
 				2FACE4D611673BE00062B492 /* BallLayer.m in Sources */,
+				2FCCB937116B76190000CC6A /* MenuScene.m in Sources */,
+				2FCCB9F3116B7D3E0000CC6A /* MenuLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

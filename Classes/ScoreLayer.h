@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MenuScene.h"
 #import "cocos2d.h"
 #import "Level.h"
 
 
-@interface ScoreLayer : CCLayer {
+@interface ScoreLayer : CCLayer
 
-}
+- (void)menu:(id)sender;
 
 @end

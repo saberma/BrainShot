@@ -51,6 +51,20 @@
   [level save];
 }
 
++ (void)reset
+{
+  Level *level = [self get];
+  [level setCurrent:[NSNumber numberWithInt:1]];  
+  [level save];
+}
+
++ (void)gotoMax
+{
+  Level *level = [self get];
+  [level setCurrent:[NSNumber numberWithInt:self.max]];
+  [level save];
+}
+
 - (void)dealloc
 {
   [current release];
