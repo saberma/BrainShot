@@ -17,7 +17,7 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init] )) {
-    CCLabel* label = [CCLabel labelWithString:[NSString stringWithFormat:@"Level %d", [Level current]] fontName:@"Marker Felt" fontSize:12];
+    CCLabel* label = [CCLabel labelWithString:[NSString stringWithFormat:@"Level %d / 60", [Level current]] fontName:@"Marker Felt" fontSize:12];
 		CGSize size = [[CCDirector sharedDirector] winSize];
     label.position = ccp(size.width/2, 302);
     [self addChild:label];

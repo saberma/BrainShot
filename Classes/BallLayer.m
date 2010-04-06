@@ -89,6 +89,8 @@
 {
   [ball show];
   if (! [ball clickCorrect]) {
+    //play sound
+    [[SimpleAudioEngine sharedEngine] playEffect:@"fail.mp3"];
     for (Ball *otherBall in self.balls) {
       [otherBall show];
       
@@ -97,16 +99,24 @@
       fail.position = ccp(size.width/2, size.height/2);
       [self addChild:fail];
       
-      [self schedule:@selector(restart:) interval:1.0f];
+      [self schedule:@selector(restart:) interval:3.0f];
     }
-  }else if ([ball number] == ([Level current] - 1)){
-    CCSprite *pass = [CCSprite spriteWithFile:@"pass.png"];
-    CGSize size = [[CCDirector sharedDirector] winSize];
-    pass.position = ccp(size.width/2, size.height/2);
-    [self addChild:pass];
-    
-    [Level increment];
-    [self schedule:@selector(nextLevel:) interval:1.0f];
+  }else {
+    if ([ball number] == ([Level current] - 1)){
+      //play sound
+      [[SimpleAudioEngine sharedEngine] playEffect:@"success.mp3"];
+      CCSprite *pass = [CCSprite spriteWithFile:@"pass.png"];
+      CGSize size = [[CCDirector sharedDirector] winSize];
+      pass.position = ccp(size.width/2, size.height/2);
+      [self addChild:pass];
+      
+      [Level increment];
+      [self schedule:@selector(nextLevel:) interval:1.0f];
+    } else {
+      //play sound
+      [[SimpleAudioEngine sharedEngine] playEffect:@"click.mp3"];
+    }
+
   }
 }
 

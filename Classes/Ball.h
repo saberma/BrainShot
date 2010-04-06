@@ -8,6 +8,7 @@
 
 #import "cocos2d.h"
 #import <Foundation/Foundation.h>
+#import "SimpleAudioEngine.h"
 
 #define ballSize 48
 
