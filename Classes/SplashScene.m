@@ -17,10 +17,8 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init] )) {
-    CCSprite *splash = [CCSprite spriteWithFile:@"Default.png"];
-    id rotate = [CCRotateBy actionWithDuration:0 angle:-90];
+    CCSprite *splash = [CCSprite spriteWithFile:@"DefaultRotate.png"];
     [splash setPosition:ccp(240, 160)];
-    [splash runAction:rotate];
     
     CCLabel *tipLabel = [CCLabel labelWithString:@"touch to start" fontName:@"Marker Felt" fontSize:24];
     [tipLabel setPosition:ccp(130, 50)];
@@ -30,6 +28,9 @@
     [layer addChild:tipLabel];
     
     [self addChild:layer];
+    
+    id action = [CCSequence actions:[CCHide action],[CCDelayTime actionWithDuration:0.5f], [CCShow action],[CCDelayTime actionWithDuration:0.5f], nil]; 
+    [tipLabel runAction:[CCRepeatForever actionWithAction:action]];
 	}
 	return self;
 }
