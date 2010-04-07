@@ -18,9 +18,9 @@
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init] )) {
     
-    CCLabel *resetLabel = [CCLabel labelWithString:@"Reset" fontName:@"Marker Felt" fontSize:32];
-    CCLabel *continueLabel = [CCLabel labelWithString:@"Continue" fontName:@"Marker Felt" fontSize:32];
-    CCLabel *returnLabel = [CCLabel labelWithString:@"Return" fontName:@"Marker Felt" fontSize:32];
+    CCLabel *resetLabel = [CCLabel labelWithString:NSLocalizedString(@"reset", nil) fontName:@"Marker Felt" fontSize:32];
+    CCLabel *continueLabel = [CCLabel labelWithString:NSLocalizedString(@"continue", nil) fontName:@"Marker Felt" fontSize:32];
+    CCLabel *returnLabel = [CCLabel labelWithString:NSLocalizedString(@"return", nil) fontName:@"Marker Felt" fontSize:32];
     
     CCMenuItemLabel *resetMenu = [CCMenuItemLabel itemWithLabel:resetLabel target:self selector:@selector(reset:)];
     CCMenuItemLabel *continueMenu = [CCMenuItemLabel itemWithLabel:continueLabel target:self selector:@selector(continueMax:)];

@@ -20,7 +20,7 @@
     CCSprite *splash = [CCSprite spriteWithFile:@"DefaultRotate.png"];
     [splash setPosition:ccp(240, 160)];
     
-    CCLabel *tipLabel = [CCLabel labelWithString:@"touch to start" fontName:@"Marker Felt" fontSize:24];
+    CCLabel *tipLabel = [CCLabel labelWithString:NSLocalizedString(@"touch", nil) fontName:@"Marker Felt" fontSize:24];
     [tipLabel setPosition:ccp(130, 50)];
     
     CCLayer *layer = [CCLayer node];
