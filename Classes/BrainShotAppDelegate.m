@@ -48,7 +48,7 @@
 	[[CCDirector sharedDirector] attachInView:window];	
 	[window makeKeyAndVisible];		
 		
-	[[CCDirector sharedDirector] runWithScene: [LevelScene node]];}
+	[[CCDirector sharedDirector] runWithScene: [SplashScene node]];}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

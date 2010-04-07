@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "cocos2d.h"
-#import "BallScene.h"
-#import "LevelScene.h"
+#import "SplashScene.h"
 
 @interface BrainShotAppDelegate : NSObject <UIApplicationDelegate> {
 	UIWindow *window;
