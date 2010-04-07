@@ -23,7 +23,7 @@
 		CGSize size = [[CCDirector sharedDirector] winSize];
     
     // create and initialize a Label
-    CCLabel* label = [CCLabel labelWithString:[NSString stringWithFormat:@"Level %d", [Level current]] fontName:@"Marker Felt" fontSize:48];
+    CCLabel* label = [CCLabel labelWithString:[NSString stringWithFormat:NSLocalizedString(@"level", nil), [Level current]] fontName:@"Marker Felt" fontSize:48];
     // position the label on the center of the screen
     label.position = ccp(size.width/2, size.height/2);
     
