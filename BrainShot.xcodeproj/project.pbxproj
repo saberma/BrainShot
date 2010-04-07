@@ -34,6 +34,7 @@
 		2F7DEE4211639D21004E947B /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7DEE4011639D21004E947B /* fail.png */; };
 		2F7DEE4311639D21004E947B /* pass.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7DEE4111639D21004E947B /* pass.png */; };
 		2F7DEE5711639E6A004E947B /* ScoreLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7DEE5611639E6A004E947B /* ScoreLayer.m */; };
+		2FA86840116CA06F009F3D8C /* SplashScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8683F116CA06F009F3D8C /* SplashScene.m */; };
 		2FACE4D611673BE00062B492 /* BallLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FACE4D511673BE00062B492 /* BallLayer.m */; };
 		2FCCB912116B5B9A0000CC6A /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FCCB911116B5B9A0000CC6A /* click.mp3 */; };
 		2FCCB92C116B6BFE0000CC6A /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FCCB92A116B6BFE0000CC6A /* fail.mp3 */; };
@@ -306,6 +307,8 @@
 		2F7DEE4111639D21004E947B /* pass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass.png; sourceTree = "<group>"; };
 		2F7DEE5511639E6A004E947B /* ScoreLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreLayer.h; sourceTree = "<group>"; };
 		2F7DEE5611639E6A004E947B /* ScoreLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreLayer.m; sourceTree = "<group>"; };
+		2FA8683E116CA06F009F3D8C /* SplashScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScene.h; sourceTree = "<group>"; };
+		2FA8683F116CA06F009F3D8C /* SplashScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScene.m; sourceTree = "<group>"; };
 		2FACE4D411673BE00062B492 /* BallLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallLayer.h; sourceTree = "<group>"; };
 		2FACE4D511673BE00062B492 /* BallLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallLayer.m; sourceTree = "<group>"; };
 		2FCCB911116B5B9A0000CC6A /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
@@ -625,6 +628,8 @@
 				2FCCB936116B76190000CC6A /* MenuScene.m */,
 				2FCCB9F1116B7D3E0000CC6A /* MenuLayer.h */,
 				2FCCB9F2116B7D3E0000CC6A /* MenuLayer.m */,
+				2FA8683E116CA06F009F3D8C /* SplashScene.h */,
+				2FA8683F116CA06F009F3D8C /* SplashScene.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1164,6 +1169,7 @@
 				2FACE4D611673BE00062B492 /* BallLayer.m in Sources */,
 				2FCCB937116B76190000CC6A /* MenuScene.m in Sources */,
 				2FCCB9F3116B7D3E0000CC6A /* MenuLayer.m in Sources */,
+				2FA86840116CA06F009F3D8C /* SplashScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1274,6 +1280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: saberma ma (52MHJ558J7)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1291,6 +1298,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = BrainShot;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DBE758AF-CC7C-4E44-8D46-1AFE1F8B1C81";
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Debug;
@@ -1352,12 +1360,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: saberma ma (52MHJ558J7)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DBE758AF-CC7C-4E44-8D46-1AFE1F8B1C81";
 				SDKROOT = iphoneos3.0;
 			};
 			name = Debug;
