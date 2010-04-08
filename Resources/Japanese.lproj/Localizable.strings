@@ -5,3 +5,10 @@
    Created by  saberma on 10-4-7.
    Copyright 2010 __MyCompanyName__. All rights reserved.
  */
+"touch"="タッチ画面が起動する";
+"level"="水準 %d";
+"score"="水準 %d / 60";
+"menu"="メニュー";
+"reset"="組み替える";
+"continue"="続ける";
+"return"="還る";

@@ -5,3 +5,10 @@
    Created by  saberma on 10-4-7.
    Copyright 2010 __MyCompanyName__. All rights reserved.
  */
+"touch"="點擊屏幕開始";
+"level"="第%d級";
+"score"="第%d/60級";
+"menu"="菜單";
+"reset"="從頭開始";
+"continue"="繼續挑戰";
+"return"="返回";

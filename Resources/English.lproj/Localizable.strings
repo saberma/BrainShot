@@ -5,8 +5,7 @@
    Created by  saberma on 10-4-7.
    Copyright 2010 __MyCompanyName__. All rights reserved.
  */
-"CFBundleDisplayName"="Brain Shot";
-"touch"="touch to start";
+"touch"="touch screen to start";
 "level"="level %d";
 "score"="level %d / 60";
 "menu"="menu";

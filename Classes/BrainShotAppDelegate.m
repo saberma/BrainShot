@@ -42,13 +42,13 @@
 	// before creating any layer, set the landscape mode
 	[[CCDirector sharedDirector] setDeviceOrientation:CCDeviceOrientationLandscapeLeft];
 	[[CCDirector sharedDirector] setAnimationInterval:1.0/60];
-	[[CCDirector sharedDirector] setDisplayFPS:NO];
 	
 	// create an openGL view inside a window
 	[[CCDirector sharedDirector] attachInView:window];	
 	[window makeKeyAndVisible];		
 		
-	[[CCDirector sharedDirector] runWithScene: [SplashScene node]];}
+	[[CCDirector sharedDirector] runWithScene: [SplashScene node]];
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

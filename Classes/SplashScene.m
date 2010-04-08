@@ -21,7 +21,7 @@
     [splash setPosition:ccp(240, 160)];
     
     CCLabel *tipLabel = [CCLabel labelWithString:NSLocalizedString(@"touch", nil) fontName:@"Marker Felt" fontSize:24];
-    [tipLabel setPosition:ccp(130, 50)];
+    [tipLabel setPosition:ccp(240, 150)];
     
     CCLayer *layer = [CCLayer node];
     [layer addChild:splash];

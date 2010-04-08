@@ -5,3 +5,10 @@
    Created by  saberma on 10-4-7.
    Copyright 2010 __MyCompanyName__. All rights reserved.
  */
+"touch"="écran tactile pour démarrer";
+"level"="niveau %d";
+"score"="niveau %d / 60";
+"menu"="menu";
+"reset"="Remettre";
+"continue"="Continuer";
+"return"="Retourner";

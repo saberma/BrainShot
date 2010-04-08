@@ -29,7 +29,7 @@
  You will need to add the fps_images.png to your project.
  If disabled, the FPS will be rendered using Label (slow rendering)
  */
-#define CC_DIRECTOR_FAST_FPS	1
+#define CC_DIRECTOR_FAST_FPS	0
 
 /**
  Senconds between FPS updates.
