@@ -36,6 +36,7 @@ CFLAGS += -I./Classes/
 CFLAGS += -I./libs/FontLabel/
 CFLAGS += -I./libs/cocos2d/
 CFLAGS += -I./libs/cocos2d/Support
+CFLAGS += -I./libs/CocosDenshion
 #CFLAGS += -I./Classes/ObjectiveResource
 #CFLAGS += -I./Classes/ObjectiveResource/objective_support/Core
 #CFLAGS += -I./Classes/ObjectiveResource/objective_support/Core/Inflections
@@ -64,6 +65,7 @@ OBJS+=$(patsubst %.m,%.o,$(wildcard $(SRCDIR)/**/**/**/**/*.m))
 OBJS+=$(patsubst %.m,%.o,$(wildcard $(SRCDIR)/**/**/**/**/**/*.m))
 OBJS+=$(patsubst %.m,%.o,$(wildcard $(LIBDIR)/FontLabel/*.m))
 OBJS+=$(patsubst %.m,%.o,$(wildcard $(LIBDIR)/cocos2d/*.m))
+OBJS+=$(patsubst %.m,%.o,$(wildcard $(LIBDIR)/CocosDenshion/*.m))
 OBJS+=$(patsubst %.m,%.o,$(wildcard $(LIBDIR)/cocos2d/Support/*.m))
 OBJS+=$(patsubst %.c,%.o,$(wildcard $(LIBDIR)/cocos2d/Support/*.c))
 #指定根目录下的main.m，否则会出现编译MakeFile.o
