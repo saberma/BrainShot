@@ -266,6 +266,7 @@
 		2F07E1771160DADC0064F846 /* circle_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_green.png; sourceTree = "<group>"; };
 		2F07E1FA1160F3650064F846 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
 		2F07E1FB1160F3650064F846 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
+		2F33FE681171DDA7002AD5BB /* targets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = targets.app; path = "/Users/cogent/Documents/BrainShot/build/Distribution-iphonesimulator/targets.app"; sourceTree = "<absolute>"; };
 		2F620C33116E08C800177B9F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F620C8E116E160500177B9F /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F620CB9116E200700177B9F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -282,7 +283,7 @@
 		2F620CC9116E218200177B9F /* Spanish */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Spanish; path = Spanish.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2F6DFD71116241200078600F /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
 		2F6DFD72116241200078600F /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
-		2F7D4025116CD7E000EBA5C3 /* Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Target.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7D4025116CD7E000EBA5C3 /* Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Target.app; path = "/Users/cogent/Documents/BrainShot/build/Distribution-iphonesimulator/Target.app"; sourceTree = "<absolute>"; };
 		2F7DECF21163878C004E947B /* LevelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelScene.h; sourceTree = "<group>"; };
 		2F7DECF31163878C004E947B /* LevelScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelScene.m; sourceTree = "<group>"; };
 		2F7DEDA711639134004E947B /* NSData-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-SQLitePersistence.h"; sourceTree = "<group>"; };
@@ -555,6 +556,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2F33FE661171DDA7002AD5BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2F7D4023116CD7E000EBA5C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -584,7 +592,6 @@
 			children = (
 				1D6058910D05DD3D006BFB54 /* BrainShot.app */,
 				506EE05E10304ED200A389B3 /* libcocos2d libraries.a */,
-				2F7D4025116CD7E000EBA5C3 /* Target.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1110,6 +1117,23 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* BrainShot.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2F33FE671171DDA7002AD5BB /* targets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F33FE6E1171DDA7002AD5BB /* Build configuration list for PBXNativeTarget "targets" */;
+			buildPhases = (
+				2F33FE641171DDA7002AD5BB /* Resources */,
+				2F33FE651171DDA7002AD5BB /* Sources */,
+				2F33FE661171DDA7002AD5BB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = targets;
+			productName = targets;
+			productReference = 2F33FE681171DDA7002AD5BB /* targets.app */;
+			productType = "com.apple.product-type.application";
+		};
 		2F7D4024116CD7E000EBA5C3 /* Target */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F7D402A116CD7E100EBA5C3 /* Build configuration list for PBXNativeTarget "Target" */;
@@ -1168,6 +1192,7 @@
 				1D6058900D05DD3D006BFB54 /* BrainShot */,
 				506EE05D10304ED200A389B3 /* cocos2d libraries */,
 				2F7D4024116CD7E000EBA5C3 /* Target */,
+				2F33FE671171DDA7002AD5BB /* targets */,
 			);
 		};
 /* End PBXProject section */
@@ -1188,6 +1213,13 @@
 				2FA8689D116CBE45009F3D8C /* DefaultRotate.png in Resources */,
 				2F620C36116E08D300177B9F /* InfoPlist.strings in Resources */,
 				2F620CBC116E200D00177B9F /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F33FE641171DDA7002AD5BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1233,6 +1265,13 @@
 				2FCCB937116B76190000CC6A /* MenuScene.m in Sources */,
 				2FCCB9F3116B7D3E0000CC6A /* MenuLayer.m in Sources */,
 				2FA86840116CA06F009F3D8C /* SplashScene.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F33FE651171DDA7002AD5BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1426,6 +1465,155 @@
 			};
 			name = Release;
 		};
+		2F33FE5D1171D74D002AD5BB /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: saberma ma";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E66B8F85-73F8-4BF2-9CE5-E41BBF4F5435";
+				SDKROOT = iphoneos3.0;
+			};
+			name = Distribution;
+		};
+		2F33FE5E1171D74D002AD5BB /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BrainShot_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = BrainShot;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Distribution;
+		};
+		2F33FE5F1171D74D002AD5BB /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				PREBINDING = NO;
+				PRODUCT_NAME = "cocos2d libraries";
+				ZERO_LINK = NO;
+			};
+			name = Distribution;
+		};
+		2F33FE601171D74D002AD5BB /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Target-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Target;
+				SDKROOT = iphoneos3.1.3;
+				ZERO_LINK = NO;
+			};
+			name = Distribution;
+		};
+		2F33FE6B1171DDA7002AD5BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "targets-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = targets;
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Debug;
+		};
+		2F33FE6C1171DDA7002AD5BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "targets-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = targets;
+				SDKROOT = iphoneos3.1.3;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		2F33FE6D1171DDA7002AD5BB /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "targets-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = targets;
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Distribution;
+		};
 		2F7D4028116CD7E000EBA5C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1545,6 +1733,17 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+				2F33FE5E1171D74D002AD5BB /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F33FE6E1171DDA7002AD5BB /* Build configuration list for PBXNativeTarget "targets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F33FE6B1171DDA7002AD5BB /* Debug */,
+				2F33FE6C1171DDA7002AD5BB /* Release */,
+				2F33FE6D1171DDA7002AD5BB /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1554,6 +1753,7 @@
 			buildConfigurations = (
 				2F7D4028116CD7E000EBA5C3 /* Debug */,
 				2F7D4029116CD7E000EBA5C3 /* Release */,
+				2F33FE601171D74D002AD5BB /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1563,6 +1763,7 @@
 			buildConfigurations = (
 				506EE05F10304ED500A389B3 /* Debug */,
 				506EE06010304ED500A389B3 /* Release */,
+				2F33FE5F1171D74D002AD5BB /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1572,6 +1773,7 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+				2F33FE5D1171D74D002AD5BB /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
