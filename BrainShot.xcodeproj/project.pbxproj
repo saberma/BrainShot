@@ -266,7 +266,8 @@
 		2F07E1771160DADC0064F846 /* circle_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_green.png; sourceTree = "<group>"; };
 		2F07E1FA1160F3650064F846 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
 		2F07E1FB1160F3650064F846 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
-		2F33FE681171DDA7002AD5BB /* targets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = targets.app; path = "/Users/cogent/Documents/BrainShot/build/Distribution-iphonesimulator/targets.app"; sourceTree = "<absolute>"; };
+		2F400E2511733D310001296E /* Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Target.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F400E2711733D310001296E /* targets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = targets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F620C33116E08C800177B9F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F620C8E116E160500177B9F /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F620CB9116E200700177B9F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -283,7 +284,6 @@
 		2F620CC9116E218200177B9F /* Spanish */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Spanish; path = Spanish.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2F6DFD71116241200078600F /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
 		2F6DFD72116241200078600F /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
-		2F7D4025116CD7E000EBA5C3 /* Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Target.app; path = "/Users/cogent/Documents/BrainShot/build/Distribution-iphonesimulator/Target.app"; sourceTree = "<absolute>"; };
 		2F7DECF21163878C004E947B /* LevelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelScene.h; sourceTree = "<group>"; };
 		2F7DECF31163878C004E947B /* LevelScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelScene.m; sourceTree = "<group>"; };
 		2F7DEDA711639134004E947B /* NSData-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-SQLitePersistence.h"; sourceTree = "<group>"; };
@@ -592,6 +592,8 @@
 			children = (
 				1D6058910D05DD3D006BFB54 /* BrainShot.app */,
 				506EE05E10304ED200A389B3 /* libcocos2d libraries.a */,
+				2F400E2511733D310001296E /* Target.app */,
+				2F400E2711733D310001296E /* targets.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1131,7 +1133,7 @@
 			);
 			name = targets;
 			productName = targets;
-			productReference = 2F33FE681171DDA7002AD5BB /* targets.app */;
+			productReference = 2F400E2711733D310001296E /* targets.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2F7D4024116CD7E000EBA5C3 /* Target */ = {
@@ -1148,7 +1150,7 @@
 			);
 			name = Target;
 			productName = Target;
-			productReference = 2F7D4025116CD7E000EBA5C3 /* Target.app */;
+			productReference = 2F400E2511733D310001296E /* Target.app */;
 			productType = "com.apple.product-type.application";
 		};
 		506EE05D10304ED200A389B3 /* cocos2d libraries */ = {
