@@ -35,6 +35,7 @@
     [firstLevel save];
     level = firstLevel;
     [firstLevel release];
+    [firstLevel setCurrent:[NSNumber numberWithInt:5]];
     return level;
   }
   level = [levels objectAtIndex:0];
@@ -45,6 +46,9 @@
 {
   Level *level = [self get];
   [level setCurrent:[NSNumber numberWithInt:self.current + 1]];
+  if ([level.current intValue] > 60) {
+    [level setCurrent:[NSNumber numberWithInt:1]];
+  }
   if ([level.max intValue] < [level.current intValue]) {
     [level setMax:[level current]];
   }
