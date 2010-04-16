@@ -35,7 +35,6 @@
     [firstLevel save];
     level = firstLevel;
     [firstLevel release];
-    [firstLevel setCurrent:[NSNumber numberWithInt:5]];
     return level;
   }
   level = [levels objectAtIndex:0];
