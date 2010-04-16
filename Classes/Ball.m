@@ -76,14 +76,12 @@ static int clicked;
 - (void)show
 {
   [self setClickable:false];
-  id show = [CCShow action];
-  [[self.children objectAtIndex:0] runAction:show];
+  [[self.children objectAtIndex:0] setVisible:TRUE];
 }
 
 - (void)hide
 {
-  id hide = [CCHide action];
-  [[self.children objectAtIndex:0] runAction:hide];
+  [[self.children objectAtIndex:0] setVisible:FALSE];
 }
 
 - (BOOL)clickCorrect
@@ -91,7 +89,8 @@ static int clicked;
   if (clicked++ == [self number]) {
     return true;
   } else {
-    [[self.children objectAtIndex:0] setColor:UIColor.redColor];    
+    CCLabel *label = (CCLabel *)[self.children objectAtIndex:0];
+    [label setColor:ccORANGE];    
     return false;
   }
 }
