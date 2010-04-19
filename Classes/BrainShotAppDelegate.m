@@ -48,8 +48,21 @@
 	[window makeKeyAndVisible];		
 		
 	[[CCDirector sharedDirector] runWithScene: [SplashScene node]];
+  
+  //support rotate
+  [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+  
 }
 
+-(void) orientationChanged:(NSNotification *)notification
+{
+	UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+	if (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight)
+	{
+		[[CCDirector sharedDirector] setDeviceOrientation:(ccDeviceOrientation)orientation];
+	}
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 	[[CCDirector sharedDirector] pause];
