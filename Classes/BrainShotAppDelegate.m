@@ -40,7 +40,9 @@
 	[CCTexture2D setDefaultAlphaPixelFormat:kTexture2DPixelFormat_RGBA8888];
 	
 	// before creating any layer, set the landscape mode
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < 30200
 	[[CCDirector sharedDirector] setDeviceOrientation:CCDeviceOrientationLandscapeLeft];
+#endif
 	[[CCDirector sharedDirector] setAnimationInterval:1.0/60];
 	
 	// create an openGL view inside a window

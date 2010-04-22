@@ -23,8 +23,9 @@ static int clicked;
 
 + (Ball *)withLabel:(int)number AtLeftIndex:(int)leftIndex AndRightIndex:(int)rightIndex
 {
-  int left = leftIndex * ballSize + ballSize/2;
-  int right = rightIndex * ballSize + ballSize/2; 
+  CGSize size = [[CCDirector sharedDirector] winSize];
+  int left = (size.width/2 - ballSize*5) + leftIndex * ballSize + ballSize/2;
+  int right = (size.height/2 - ballSize*3.3) + rightIndex * ballSize + ballSize/2; 
   
   Ball *ball = [Ball spriteWithFile:@"circle_green.png"];
   ball.position =  ccp( left , right + 2 );
@@ -32,7 +33,7 @@ static int clicked;
   // create and initialize a Label
   CCLabel* label = [CCLabel labelWithString:[NSString stringWithFormat:@"%d", number] fontName:@"Marker Felt" fontSize:32];
   // position the label on the center of the screen
-  label.position = ccp(ballSize/2, ballSize/2);
+  label.position = ccp(24, 24);
   
   [ball setNumber:number];
   [ball addChild:label];

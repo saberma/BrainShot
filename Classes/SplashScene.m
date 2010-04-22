@@ -17,11 +17,15 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init] )) {
+    CGSize size = [[CCDirector sharedDirector] winSize];
     CCSprite *splash = [CCSprite spriteWithFile:@"DefaultRotate.png"];
-    [splash setPosition:ccp(240, 160)];
+    [splash setPosition:ccp(size.width/2, size.height/2)];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
+    [splash runAction:[CCScaleBy actionWithDuration:0 scale:1.6f]];
+#endif
     
     CCLabel *tipLabel = [CCLabel labelWithString:NSLocalizedString(@"touch", nil) fontName:@"Marker Felt" fontSize:24];
-    [tipLabel setPosition:ccp(240, 150)];
+    [tipLabel setPosition:ccp(size.width/2, size.height/2 - 10)];
     
     CCLayer *layer = [CCLayer node];
     [layer addChild:splash];

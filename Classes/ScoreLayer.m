@@ -7,6 +7,7 @@
 //
 
 #import "ScoreLayer.h"
+#import "Ball.h"
 
 
 @implementation ScoreLayer
@@ -19,13 +20,13 @@
 	if( (self=[super init] )) {
     CCLabel* label = [CCLabel labelWithString:[NSString stringWithFormat:NSLocalizedString(@"score", nil), [Level current]] fontName:@"Marker Felt" fontSize:20];
     CGSize size = [[CCDirector sharedDirector] winSize];
-    label.position = ccp(size.width/2, 300);
+    label.position = ccp(size.width/2, size.height/2 + ballSize*2.91);
     [self addChild:label];
     
     CCLabel* gotoMenu = [CCLabel labelWithString:NSLocalizedString(@"menu", nil) fontName:@"Marker Felt" fontSize:20];
     CCMenuItemLabel *menuLabel = [CCMenuItemLabel itemWithLabel:gotoMenu target:self selector:@selector(menu:)];
     CCMenu *menu = [CCMenu menuWithItems:menuLabel, nil];
-    menu.position = ccp(size.width - 30, 300);
+    menu.position = ccp(size.width - 30, size.height/2 + ballSize*2.91);
 		[self addChild:menu];
 	}
 	return self;

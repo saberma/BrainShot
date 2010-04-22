@@ -10,7 +10,11 @@
 #import <Foundation/Foundation.h>
 #import "SimpleAudioEngine.h"
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
+#define ballSize 76.8
+#else
 #define ballSize 48
+#endif
 
 @protocol BallDelegate;
 
