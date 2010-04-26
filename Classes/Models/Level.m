@@ -10,7 +10,19 @@
 
 
 @implementation Level
-@synthesize current, max;
+@synthesize current, max, iap;
+
++ (int)top
+{
+  Level *level = [self get];
+  if ([level iap] == nil) {
+    [level setIap:[NSNumber numberWithInt:2]];
+    //LITE WILL BE 1
+    //[level setIap:[NSNumber numberWithInt:1]];
+    [level save];
+  }
+  return [level.iap intValue] * 10;
+}
 
 + (int)max
 {
@@ -45,7 +57,7 @@
 {
   Level *level = [self get];
   [level setCurrent:[NSNumber numberWithInt:self.current + 1]];
-  if ([level.current intValue] > 60) {
+  if ([level.current intValue] > [Level top]) {
     [level setCurrent:[NSNumber numberWithInt:1]];
   }
   if ([level.max intValue] < [level.current intValue]) {

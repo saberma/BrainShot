@@ -7,7 +7,7 @@
  */
 "touch"="touch screen to start";
 "level"="level %d";
-"score"="level %d / 60";
+"score"="level %d/%d";
 "menu"="menu";
 "reset"="Reset";
 "continue"="Continue";

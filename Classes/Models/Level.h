@@ -13,9 +13,12 @@
 @interface Level : SQLitePersistentObject {
   NSNumber *current;
   NSNumber *max;
+  NSNumber *iap;
 }
-@property (nonatomic, retain) NSNumber *current, *max;
+@property (nonatomic, retain) NSNumber *current, *max, *iap;
 
+//top level
++ (int)top;
 + (int)max;
 + (int)current;
 + (Level *)get;

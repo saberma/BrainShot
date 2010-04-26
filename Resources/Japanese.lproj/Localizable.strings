@@ -7,7 +7,7 @@
  */
 "touch"="タッチ画面が起動する";
 "level"="水準 %d";
-"score"="水準 %d / 60";
+"score"="水準 %d/%d";
 "menu"="メニュー";
 "reset"="組み替える";
 "continue"="続ける";

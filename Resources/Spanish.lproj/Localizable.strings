@@ -7,7 +7,7 @@
  */
 "touch"="pantalla táctil para iniciar";
 "level"="llano %d";
-"score"="llano %d / 60";
+"score"="llano %d/%d";
 "menu"="menú";
 "reset"="Reajustar";
 "continue"="Continuar";

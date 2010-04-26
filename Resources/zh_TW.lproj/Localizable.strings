@@ -7,7 +7,7 @@
  */
 "touch"="點擊屏幕開始";
 "level"="第%d級";
-"score"="第%d/60級";
+"score"="第%d/%d級";
 "menu"="菜單";
 "reset"="從頭開始";
 "continue"="繼續挑戰";
