@@ -26,7 +26,7 @@
     CCLabel* gotoMenu = [CCLabel labelWithString:NSLocalizedString(@"menu", nil) fontName:@"Marker Felt" fontSize:20];
     CCMenuItemLabel *menuLabel = [CCMenuItemLabel itemWithLabel:gotoMenu target:self selector:@selector(menu:)];
     CCMenu *menu = [CCMenu menuWithItems:menuLabel, nil];
-    menu.position = ccp(size.width - 30, size.height/2 + ballSize*2.91);
+    menu.position = ccp(size.width/2 + ballSize*4.5, size.height/2 + ballSize*2.91);
 		[self addChild:menu];
 	}
 	return self;

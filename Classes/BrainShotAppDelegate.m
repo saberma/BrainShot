@@ -40,9 +40,7 @@
 	[CCTexture2D setDefaultAlphaPixelFormat:kTexture2DPixelFormat_RGBA8888];
 	
 	// before creating any layer, set the landscape mode
-#if __IPHONE_OS_VERSION_MAX_ALLOWED < 30200
 	[[CCDirector sharedDirector] setDeviceOrientation:CCDeviceOrientationLandscapeLeft];
-#endif
 	[[CCDirector sharedDirector] setAnimationInterval:1.0/60];
 	
 	// create an openGL view inside a window
@@ -53,15 +51,14 @@
   
   //support rotate
   [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];  
   
 }
 
 -(void) orientationChanged:(NSNotification *)notification
 {
 	UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
-	if (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight)
-	{
+	if (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight){
 		[[CCDirector sharedDirector] setDeviceOrientation:(ccDeviceOrientation)orientation];
 	}
 }
