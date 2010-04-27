@@ -26,4 +26,7 @@
 + (void)reset;
 + (void)gotoMax;
 
+//iap level product identifier
++ (NSString *)nextTopIdentifier;
+
 @end

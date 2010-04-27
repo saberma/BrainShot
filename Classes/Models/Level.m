@@ -80,6 +80,10 @@
   [level save];
 }
 
++ (NSString *)nextTopIdentifier{
+  return [NSString stringWithFormat:@"cn.com.cogentsoft.BrainShot.level%d", [Level top] + 10];
+}
+
 - (void)dealloc
 {
   [current release];

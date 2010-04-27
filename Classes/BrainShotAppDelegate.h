@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "cocos2d.h"
 #import "SplashScene.h"
+#import "MyStoreObserver.h"
 
 @interface BrainShotAppDelegate : NSObject <UIApplicationDelegate> {
 	UIWindow *window;

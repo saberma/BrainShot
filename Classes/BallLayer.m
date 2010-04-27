@@ -82,7 +82,47 @@
 -(void) nextLevel: (ccTime) dt
 {
   [self unschedule:_cmd];
-  [[CCDirector sharedDirector] replaceScene: [LevelScene node]];
+  //check for iap
+  //TODO ==============
+  //TODO ==============
+  //TODO ==============
+  //TODO ==============
+  //if ([Level current] == [Level top]) {
+  if ([Level current] != [Level top]) {
+    UIAlertView *alertView = [[UIAlertView alloc] init];
+    [alertView setTitle:@"Level completed!"];
+    [alertView setMessage:@"Do you want to get more levels?"];
+    [alertView setDelegate:self];
+    [alertView addButtonWithTitle:@"Yes"];
+    [alertView addButtonWithTitle:@"No"];
+    [alertView show];
+    [alertView release];
+  }else {
+    [[CCDirector sharedDirector] replaceScene: [LevelScene node]];
+  }
+}
+
+//select iap
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+  if (buttonIndex == 0) {
+    SKProductsRequest *request= [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject: [Level nextTopIdentifier]]]; 
+    request.delegate = self; 
+    [request start]; 
+  }else if (buttonIndex == 1) {
+    [[CCDirector sharedDirector] replaceScene: [LevelScene node]];
+  }
+}
+
+#pragma mark request delegate
+- (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response{  
+  SKPayment *payment = [SKPayment paymentWithProductIdentifier:[Level nextTopIdentifier]]; 
+  [[SKPaymentQueue defaultQueue] addPayment:payment]; 
+  [request autorelease];
+}
+
+- (void)request:(SKRequest *)request didFailWithError:(NSError *)error{  
+  UIAlertView *alerView =  [[UIAlertView alloc] initWithTitle:@"Alert" message:[error localizedDescription]  delegate:nil 
+                                            cancelButtonTitle:NSLocalizedString(@"Close",nil)  otherButtonTitles:nil];  [alerView show]; [alerView release]; 
 }
 
 - (void)click: (Ball *) ball
