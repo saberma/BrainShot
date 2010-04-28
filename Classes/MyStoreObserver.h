@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h> 
 #import <StoreKit/StoreKit.h> 
-#import <StoreKit/SKPaymentTransaction.h> 
 #import "cocos2d.h"
 #import "Level.h"
 #import "LevelScene.h"

@@ -64,6 +64,7 @@
 		2F620C36116E08D300177B9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F620C35116E08D300177B9F /* InfoPlist.strings */; };
 		2F620CBC116E200D00177B9F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F620CBB116E200D00177B9F /* Localizable.strings */; };
 		2F6DFD73116241200078600F /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DFD72116241200078600F /* Position.m */; };
+		2F725769118876EF00B4FA3E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F725768118876EF00B4FA3E /* StoreKit.framework */; };
 		2F7DECF41163878C004E947B /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7DECF31163878C004E947B /* LevelScene.m */; };
 		2F7DEDC711639134004E947B /* NSData-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7DEDA811639134004E947B /* NSData-SQLitePersistence.m */; };
 		2F7DEDC811639134004E947B /* NSDate-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7DEDAA11639134004E947B /* NSDate-SQLitePersistence.m */; };
@@ -91,7 +92,6 @@
 		2FACE4D611673BE00062B492 /* BallLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FACE4D511673BE00062B492 /* BallLayer.m */; };
 		2FB3DAD511871F530098ECD7 /* MyStoreObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3DAD411871F530098ECD7 /* MyStoreObserver.m */; };
 		2FB3DAD611871F530098ECD7 /* MyStoreObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3DAD411871F530098ECD7 /* MyStoreObserver.m */; };
-		2FB3DAE9118720580098ECD7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB3DAE8118720580098ECD7 /* StoreKit.framework */; };
 		2FCCB912116B5B9A0000CC6A /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FCCB911116B5B9A0000CC6A /* click.mp3 */; };
 		2FCCB92C116B6BFE0000CC6A /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FCCB92A116B6BFE0000CC6A /* fail.mp3 */; };
 		2FCCB92D116B6BFE0000CC6A /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FCCB92B116B6BFE0000CC6A /* success.mp3 */; };
@@ -343,6 +343,7 @@
 		2F620CC9116E218200177B9F /* Spanish */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Spanish; path = Spanish.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2F6DFD71116241200078600F /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
 		2F6DFD72116241200078600F /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
+		2F725768118876EF00B4FA3E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2F7DECF21163878C004E947B /* LevelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelScene.h; sourceTree = "<group>"; };
 		2F7DECF31163878C004E947B /* LevelScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelScene.m; sourceTree = "<group>"; };
 		2F7DEDA711639134004E947B /* NSData-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-SQLitePersistence.h"; sourceTree = "<group>"; };
@@ -391,7 +392,6 @@
 		2FACE4D511673BE00062B492 /* BallLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallLayer.m; sourceTree = "<group>"; };
 		2FB3DAD311871F530098ECD7 /* MyStoreObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyStoreObserver.h; sourceTree = "<group>"; };
 		2FB3DAD411871F530098ECD7 /* MyStoreObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyStoreObserver.m; sourceTree = "<group>"; };
-		2FB3DAE8118720580098ECD7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2FCCB911116B5B9A0000CC6A /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		2FCCB92A116B6BFE0000CC6A /* fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fail.mp3; sourceTree = "<group>"; };
 		2FCCB92B116B6BFE0000CC6A /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
@@ -615,7 +615,7 @@
 				506EDBA5102F4C9F00A389B3 /* AVFoundation.framework in Frameworks */,
 				506EE1A91030508200A389B3 /* libcocos2d libraries.a in Frameworks */,
 				2F7DEE13116397F1004E947B /* libsqlite3.0.dylib in Frameworks */,
-				2FB3DAE9118720580098ECD7 /* StoreKit.framework in Frameworks */,
+				2F725769118876EF00B4FA3E /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,7 +702,7 @@
 				506EDB87102F4C4000A389B3 /* libz.dylib */,
 				506EDBA4102F4C9F00A389B3 /* AVFoundation.framework */,
 				2F7DEE12116397F1004E947B /* libsqlite3.0.dylib */,
-				2FB3DAE8118720580098ECD7 /* StoreKit.framework */,
+				2F725768118876EF00B4FA3E /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

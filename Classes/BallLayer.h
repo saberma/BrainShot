@@ -12,7 +12,6 @@
 #import "ScoreLayer.h"
 #import "Position.h"
 #import <StoreKit/StoreKit.h> 
-#import <StoreKit/SKPaymentTransaction.h> 
 
 @interface BallLayer : CCLayer < BallDelegate, UIAlertViewDelegate, SKProductsRequestDelegate>
 {

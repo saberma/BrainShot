@@ -89,26 +89,10 @@
   //TODO ==============
   //if ([Level current] == [Level top]) {
   if ([Level current] != [Level top]) {
-    UIAlertView *alertView = [[UIAlertView alloc] init];
-    [alertView setTitle:@"Level completed!"];
-    [alertView setMessage:@"Do you want to get more levels?"];
-    [alertView setDelegate:self];
-    [alertView addButtonWithTitle:@"Yes"];
-    [alertView addButtonWithTitle:@"No"];
-    [alertView show];
-    [alertView release];
-  }else {
-    [[CCDirector sharedDirector] replaceScene: [LevelScene node]];
-  }
-}
-
-//select iap
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-  if (buttonIndex == 0) {
     SKProductsRequest *request= [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject: [Level nextTopIdentifier]]]; 
     request.delegate = self; 
     [request start]; 
-  }else if (buttonIndex == 1) {
+  }else {
     [[CCDirector sharedDirector] replaceScene: [LevelScene node]];
   }
 }
@@ -121,8 +105,12 @@
 }
 
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error{  
-  UIAlertView *alerView =  [[UIAlertView alloc] initWithTitle:@"Alert" message:[error localizedDescription]  delegate:nil 
-                                            cancelButtonTitle:NSLocalizedString(@"Close",nil)  otherButtonTitles:nil];  [alerView show]; [alerView release]; 
+  UIAlertView *alerView =  [[UIAlertView alloc] initWithTitle:@"Alert" message:[error localizedDescription]  delegate:self 
+                                            cancelButtonTitle:NSLocalizedString(@"Close",nil)  otherButtonTitles:nil];  [alerView show]; [alerView release];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+  [[CCDirector sharedDirector] replaceScene: [LevelScene node]];
 }
 
 - (void)click: (Ball *) ball

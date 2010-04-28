@@ -40,6 +40,7 @@
     // Optionally, display an error here.
   }
   [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
+  [[CCDirector sharedDirector] replaceScene: [LevelScene node]];
 }
 
 - (void) restoreTransaction: (SKPaymentTransaction *)transaction{
@@ -49,7 +50,7 @@
 
 - (void) provideContent: (NSString *)productIdentifier{
   Level *level = [Level get];
-  [level setIap:[level iap]+1];
+  [level setIap:[NSNumber numberWithInt:(level.iap.intValue+1)]];
   [level save];
   [[CCDirector sharedDirector] replaceScene: [LevelScene node]];
 }
