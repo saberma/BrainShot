@@ -83,12 +83,7 @@
 {
   [self unschedule:_cmd];
   //check for iap
-  //TODO ==============
-  //TODO ==============
-  //TODO ==============
-  //TODO ==============
-  //if ([Level current] == [Level top]) {
-  if ([Level current] != [Level top]) {
+  if ([Level current] == [Level top]) {
     SKProductsRequest *request= [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject: [Level nextTopIdentifier]]]; 
     request.delegate = self; 
     [request start]; 

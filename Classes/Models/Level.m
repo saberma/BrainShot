@@ -44,12 +44,18 @@
     Level *firstLevel = [[Level alloc] init];
     [firstLevel setCurrent:[NSNumber numberWithInt:1]];
     [firstLevel setMax:firstLevel.current];
+#ifdef DEBUG
+    [firstLevel setCurrent:[NSNumber numberWithInt:5]];
+#endif
     [firstLevel save];
     level = firstLevel;
     [firstLevel release];
     return level;
   }
   level = [levels objectAtIndex:0];
+#ifdef DEBUG
+  [level setCurrent:[NSNumber numberWithInt:5]];
+#endif
   return level;
 }
 
