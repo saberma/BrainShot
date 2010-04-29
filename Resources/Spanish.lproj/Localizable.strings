@@ -6,6 +6,7 @@
    Copyright 2010 __MyCompanyName__. All rights reserved.
  */
 "touch"="pantalla táctil para iniciar";
+"rule"="Cómo jugar: toque la número oculto, desde menor número a mayor";
 "level"="llano %d";
 "score"="llano %d/%d";
 "menu"="menú";

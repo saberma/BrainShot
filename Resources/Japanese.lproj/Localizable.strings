@@ -6,6 +6,7 @@
    Copyright 2010 __MyCompanyName__. All rights reserved.
  */
 "touch"="タッチ画面が起動する";
+"rule"="再生する方法：隠し番号を触れる、最低番号から最高に";
 "level"="水準 %d";
 "score"="水準 %d/%d";
 "menu"="メニュー";

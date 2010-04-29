@@ -6,6 +6,7 @@
    Copyright 2010 __MyCompanyName__. All rights reserved.
  */
 "touch"="Touch-Screen zu starten";
+"rule"="Wie spiele: touch die versteckten Zahl, from niedrigste Zahl zum höchsten";
 "level"="ebene %d";
 "score"="ebene %d/%d";
 "menu"="Menü";

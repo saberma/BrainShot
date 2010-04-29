@@ -6,6 +6,7 @@
    Copyright 2010 __MyCompanyName__. All rights reserved.
  */
 "touch"="écran tactile pour démarrer";
+"rule"="Comment jouer: touch le nombre cachés, partir bas nombre haut vers";
 "level"="niveau %d";
 "score"="niveau %d/%d";
 "menu"="menu";

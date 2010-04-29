@@ -6,6 +6,7 @@
    Copyright 2010 __MyCompanyName__. All rights reserved.
  */
 "touch"="點擊屏幕開始";
+"rule"="玩法: 從小至大點擊隱藏數字的小球";
 "level"="第%d級";
 "score"="第%d/%d級";
 "menu"="菜單";

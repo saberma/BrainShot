@@ -6,6 +6,7 @@
    Copyright 2010 __MyCompanyName__. All rights reserved.
  */
 "touch"="touch screen to start";
+"rule"="How to play: touch the hidden number, from lowest number to highest";
 "level"="level %d";
 "score"="level %d/%d";
 "menu"="menu";

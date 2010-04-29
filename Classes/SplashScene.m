@@ -25,11 +25,15 @@
 #endif
     
     CCLabel *tipLabel = [CCLabel labelWithString:NSLocalizedString(@"touch", nil) fontName:@"Marker Felt" fontSize:24];
-    [tipLabel setPosition:ccp(size.width/2, size.height/2 - 10)];
+    [tipLabel setPosition:ccp(size.width/2 - ballSize*2, size.height/2 - ballSize*3)];
+    
+    CCLabel *ruleLabel = [CCLabel labelWithString:NSLocalizedString(@"rule", nil) dimensions:CGSizeMake(300, 120) alignment:UITextAlignmentLeft fontName:@"Marker Felt" fontSize:20];
+    [ruleLabel setPosition:ccp(size.width/2, size.height/2 - ballSize)];
     
     CCLayer *layer = [CCLayer node];
     [layer addChild:splash];
     [layer addChild:tipLabel];
+    [layer addChild:ruleLabel];
     
     [self addChild:layer];
     

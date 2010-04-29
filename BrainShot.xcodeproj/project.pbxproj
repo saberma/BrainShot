@@ -87,6 +87,7 @@
 		2F7DEE4211639D21004E947B /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7DEE4011639D21004E947B /* fail.png */; };
 		2F7DEE4311639D21004E947B /* pass.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7DEE4111639D21004E947B /* pass.png */; };
 		2F7DEE5711639E6A004E947B /* ScoreLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7DEE5611639E6A004E947B /* ScoreLayer.m */; };
+		2F96597B1189BDD1008CE1E2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F96597A1189BDD1008CE1E2 /* StoreKit.framework */; };
 		2FA86840116CA06F009F3D8C /* SplashScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8683F116CA06F009F3D8C /* SplashScene.m */; };
 		2FA8689D116CBE45009F3D8C /* DefaultRotate.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FA8689C116CBE45009F3D8C /* DefaultRotate.png */; };
 		2FACE4D611673BE00062B492 /* BallLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FACE4D511673BE00062B492 /* BallLayer.m */; };
@@ -385,6 +386,7 @@
 		2F7DEE4111639D21004E947B /* pass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass.png; sourceTree = "<group>"; };
 		2F7DEE5511639E6A004E947B /* ScoreLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreLayer.h; sourceTree = "<group>"; };
 		2F7DEE5611639E6A004E947B /* ScoreLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreLayer.m; sourceTree = "<group>"; };
+		2F96597A1189BDD1008CE1E2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2FA8683E116CA06F009F3D8C /* SplashScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScene.h; sourceTree = "<group>"; };
 		2FA8683F116CA06F009F3D8C /* SplashScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScene.m; sourceTree = "<group>"; };
 		2FA8689C116CBE45009F3D8C /* DefaultRotate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultRotate.png; sourceTree = "<group>"; };
@@ -634,6 +636,7 @@
 				2F393C4B117C8770003126FA /* AVFoundation.framework in Frameworks */,
 				2F393C4C117C8770003126FA /* libcocos2d libraries.a in Frameworks */,
 				2F393C4D117C8770003126FA /* libsqlite3.0.dylib in Frameworks */,
+				2F96597B1189BDD1008CE1E2 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +706,7 @@
 				506EDBA4102F4C9F00A389B3 /* AVFoundation.framework */,
 				2F7DEE12116397F1004E947B /* libsqlite3.0.dylib */,
 				2F725768118876EF00B4FA3E /* StoreKit.framework */,
+				2F96597A1189BDD1008CE1E2 /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1514,7 +1518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: saberma ma (52MHJ558J7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1532,7 +1536,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = BrainShot;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DBE758AF-CC7C-4E44-8D46-1AFE1F8B1C81";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -1738,13 +1742,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: saberma ma (52MHJ558J7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DBE758AF-CC7C-4E44-8D46-1AFE1F8B1C81";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
