@@ -1443,7 +1443,6 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = BrainShot;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EFAC8FE6-8A32-438E-8382-5904383A6C8F";
 				SDKROOT = iphoneos3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wall";
