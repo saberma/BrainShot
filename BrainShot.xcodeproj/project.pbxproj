@@ -12,7 +12,6 @@
 		2F07E1781160DADC0064F846 /* circle_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F07E1771160DADC0064F846 /* circle_green.png */; };
 		2F07E1FC1160F3650064F846 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F07E1FB1160F3650064F846 /* Ball.m */; };
 		2F3275E4118AA17F00A12AFE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F3275E3118AA17F00A12AFE /* Icon.png */; };
-		2F3275F2118AA2F200A12AFE /* Icon-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F3275F1118AA2F200A12AFE /* Icon-ipad.png */; };
 		2F620C36116E08D300177B9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F620C35116E08D300177B9F /* InfoPlist.strings */; };
 		2F620CBC116E200D00177B9F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F620CBB116E200D00177B9F /* Localizable.strings */; };
 		2F6DFD73116241200078600F /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DFD72116241200078600F /* Position.m */; };
@@ -270,7 +269,6 @@
 		2F07E1FA1160F3650064F846 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
 		2F07E1FB1160F3650064F846 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
 		2F3275E3118AA17F00A12AFE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		2F3275F1118AA2F200A12AFE /* Icon-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-ipad.png"; path = "Resources-iPad/Icon-ipad.png"; sourceTree = "<group>"; };
 		2F620C33116E08C800177B9F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F620C8E116E160500177B9F /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F620CB9116E200700177B9F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -598,7 +596,6 @@
 				2D500B1D0D5A766B00DBA0E3 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				50F414EB1069373D002A0D5E /* Resources */,
-				2F9659C81189CBCD008CE1E2 /* Resources-iPad */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -710,14 +707,6 @@
 				2F7DEDE1116391C8004E947B /* Level.m */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		2F9659C81189CBCD008CE1E2 /* Resources-iPad */ = {
-			isa = PBXGroup;
-			children = (
-				2F3275F1118AA2F200A12AFE /* Icon-ipad.png */,
-			);
-			name = "Resources-iPad";
 			sourceTree = "<group>";
 		};
 		502BC3541120837500A0B92A /* CocosDenshion */ = {
@@ -1186,7 +1175,6 @@
 				2F620C36116E08D300177B9F /* InfoPlist.strings in Resources */,
 				2F620CBC116E200D00177B9F /* Localizable.strings in Resources */,
 				2F3275E4118AA17F00A12AFE /* Icon.png in Resources */,
-				2F3275F2118AA2F200A12AFE /* Icon-ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1387,8 +1375,8 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = BrainShot;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphonesimulator3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = iphoneos3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Debug;
@@ -1412,8 +1400,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = BrainShot;
-				SDKROOT = iphoneos3.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = iphoneos3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Release;
@@ -1430,7 +1418,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6CA145A0-1C6E-46EF-9CF9-E7FFB317E3F0";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EFAC8FE6-8A32-438E-8382-5904383A6C8F";
 				SDKROOT = iphoneos3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1455,8 +1443,9 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = BrainShot;
-				SDKROOT = iphoneos3.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EFAC8FE6-8A32-438E-8382-5904383A6C8F";
+				SDKROOT = iphoneos3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Distribution;

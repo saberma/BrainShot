@@ -87,7 +87,7 @@
 }
 
 + (NSString *)nextTopIdentifier{
-  return [NSString stringWithFormat:@"cn.com.cogentsoft.BrainShot.level%d", [Level top] + 10];
+  return [NSString stringWithFormat:@"cn.com.cogentsoft.BrainShotx5.iphone.level%d", [Level top] + 10];
 }
 
 - (void)dealloc
