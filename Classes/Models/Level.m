@@ -17,8 +17,10 @@
   Level *level = [self get];
   if ([level iap] == nil) {
     [level setIap:[NSNumber numberWithInt:2]];
-    //LITE WILL BE 1
-    //[level setIap:[NSNumber numberWithInt:1]];
+#ifdef FREE
+    //FREE EDITION WILL BE 1
+    [level setIap:[NSNumber numberWithInt:1]];
+#endif
     [level save];
   }
   return [level.iap intValue] * 10;
@@ -87,7 +89,11 @@
 }
 
 + (NSString *)nextTopIdentifier{
-  return [NSString stringWithFormat:@"cn.com.cogentsoft.BrainShotx5.iphone.level%d", [Level top] + 10];
+  NSString *productName = @"BrainShotx5";
+#ifdef FREE
+  productName = @"BrainShotFreex5";
+#endif
+  return [NSString stringWithFormat:@"cn.com.cogentsoft.%@.iphone.level%d", productName, [Level top] + 10];
 }
 
 - (void)dealloc
