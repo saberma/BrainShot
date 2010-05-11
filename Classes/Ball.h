@@ -10,12 +10,6 @@
 #import <Foundation/Foundation.h>
 #import "SimpleAudioEngine.h"
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
-#define ballSize 76.8
-#else
-#define ballSize 48
-#endif
-
 @protocol BallDelegate;
 
 @interface Ball : CCSprite <CCTargetedTouchDelegate> {
@@ -32,6 +26,7 @@
 
 + (Ball *)withLabel:(int)number AtLeftIndex:(int)leftIndex AndRightIndex:(int)rightIndex;
 + (void)clearClicked;
++ (int)size;
 
 - (void)hide;
 - (void)show;

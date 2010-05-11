@@ -24,8 +24,8 @@ static int clicked;
 + (Ball *)withLabel:(int)number AtLeftIndex:(int)leftIndex AndRightIndex:(int)rightIndex
 {
   CGSize size = [[CCDirector sharedDirector] winSize];
-  int left = (size.width/2 - ballSize*5) + leftIndex * ballSize + ballSize/2;
-  int right = (size.height/2 - ballSize*3.3) + rightIndex * ballSize + ballSize/2; 
+  int left = (size.width/2 - Ball.size*5) + leftIndex * Ball.size + Ball.size/2;
+  int right = (size.height/2 - Ball.size*3.3) + rightIndex * Ball.size + Ball.size/2; 
   
   Ball *ball = [Ball spriteWithFile:@"circle_green.png"];
   ball.position =  ccp( left , right + 2 );
@@ -39,6 +39,18 @@ static int clicked;
   [ball addChild:label];
    
   return ball;
+}
+
++ (int)size{
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
+  if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+    return 76.8;
+  } else {
+    return 48;
+  }
+#else
+  return 48;
+#endif
 }
 
 - (CGRect)rect

@@ -93,7 +93,7 @@
 #ifdef FREE
   productName = @"BrainShotFreex5";
 #endif
-  return [NSString stringWithFormat:@"cn.com.cogentsoft.%@.iphone.level%d", productName, [Level top] + 10];
+  return [NSString stringWithFormat:@"cn.com.cogentsoft.%@.level%d", productName, [Level top] + 10];
 }
 
 - (void)dealloc

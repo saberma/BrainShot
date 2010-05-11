@@ -21,14 +21,16 @@
     CCSprite *splash = [CCSprite spriteWithFile:@"DefaultRotate.png"];
     [splash setPosition:ccp(size.width/2, size.height/2)];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
-    [splash runAction:[CCScaleBy actionWithDuration:0 scale:1.6f]];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+      [splash runAction:[CCScaleBy actionWithDuration:0 scale:1.6f]];
+    }
 #endif
     
     CCLabel *tipLabel = [CCLabel labelWithString:NSLocalizedString(@"touch", nil) fontName:@"Marker Felt" fontSize:24];
-    [tipLabel setPosition:ccp(size.width/2 - ballSize*2, size.height/2 - ballSize*3)];
+    [tipLabel setPosition:ccp(size.width/2 - Ball.size*2, size.height/2 - Ball.size*3)];
     
     CCLabel *ruleLabel = [CCLabel labelWithString:NSLocalizedString(@"rule", nil) dimensions:CGSizeMake(300, 120) alignment:UITextAlignmentLeft fontName:@"Marker Felt" fontSize:20];
-    [ruleLabel setPosition:ccp(size.width/2, size.height/2 - ballSize)];
+    [ruleLabel setPosition:ccp(size.width/2, size.height/2 - Ball.size)];
     
     CCLayer *layer = [CCLayer node];
     [layer addChild:splash];
