@@ -170,6 +170,8 @@
 		2F443A8311919DC50058609F /* libcocos2d libraries.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 506EE05E10304ED200A389B3 /* libcocos2d libraries.a */; };
 		2F443A8411919DC50058609F /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7DEE12116397F1004E947B /* libsqlite3.0.dylib */; };
 		2F443A8511919DC50058609F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F725768118876EF00B4FA3E /* StoreKit.framework */; };
+		2F44A0CC119E9CE20071D347 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F44A0CB119E9CE20071D347 /* MediaPlayer.framework */; };
+		2F44A0CE119E9CE20071D347 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F44A0CD119E9CE20071D347 /* MessageUI.framework */; };
 		2F620C36116E08D300177B9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F620C35116E08D300177B9F /* InfoPlist.strings */; };
 		2F620CBC116E200D00177B9F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F620CBB116E200D00177B9F /* Localizable.strings */; };
 		2F6DFD73116241200078600F /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DFD72116241200078600F /* Position.m */; };
@@ -196,6 +198,14 @@
 		2F7DEE4211639D21004E947B /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7DEE4011639D21004E947B /* fail.png */; };
 		2F7DEE4311639D21004E947B /* pass.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7DEE4111639D21004E947B /* pass.png */; };
 		2F7DEE5711639E6A004E947B /* ScoreLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7DEE5611639E6A004E947B /* ScoreLayer.m */; };
+		2F99A962119E9B30005F3A9E /* libAdMob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F99A95F119E9B30005F3A9E /* libAdMob.a */; };
+		2F99A963119E9B30005F3A9E /* libAdMob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F99A95F119E9B30005F3A9E /* libAdMob.a */; };
+		2F99A964119E9B30005F3A9E /* libAdMob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F99A95F119E9B30005F3A9E /* libAdMob.a */; };
+		2F99A965119E9B30005F3A9E /* libAdMob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F99A95F119E9B30005F3A9E /* libAdMob.a */; };
+		2F99A968119E9B44005F3A9E /* AdMobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F99A967119E9B44005F3A9E /* AdMobLayer.m */; };
+		2F99A969119E9B44005F3A9E /* AdMobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F99A967119E9B44005F3A9E /* AdMobLayer.m */; };
+		2F99A96A119E9B44005F3A9E /* AdMobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F99A967119E9B44005F3A9E /* AdMobLayer.m */; };
+		2F99A96B119E9B44005F3A9E /* AdMobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F99A967119E9B44005F3A9E /* AdMobLayer.m */; };
 		2FA86840116CA06F009F3D8C /* SplashScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8683F116CA06F009F3D8C /* SplashScene.m */; };
 		2FA8689D116CBE45009F3D8C /* DefaultRotate.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FA8689C116CBE45009F3D8C /* DefaultRotate.png */; };
 		2FACE4D611673BE00062B492 /* BallLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FACE4D511673BE00062B492 /* BallLayer.m */; };
@@ -453,6 +463,8 @@
 		2F3E75AE11998B4300F65F2D /* Info-universal.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-universal.plist"; sourceTree = "<group>"; };
 		2F3E7634119991F700F65F2D /* BrainShotFreex5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainShotFreex5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F443A8A11919DC50058609F /* BrainShotFreex5.iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainShotFreex5.iphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F44A0CB119E9CE20071D347 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		2F44A0CD119E9CE20071D347 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		2F620C33116E08C800177B9F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F620C8E116E160500177B9F /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F620CB9116E200700177B9F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -512,6 +524,11 @@
 		2F7DEE5511639E6A004E947B /* ScoreLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreLayer.h; sourceTree = "<group>"; };
 		2F7DEE5611639E6A004E947B /* ScoreLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreLayer.m; sourceTree = "<group>"; };
 		2F96597A1189BDD1008CE1E2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2F99A95F119E9B30005F3A9E /* libAdMob.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdMob.a; sourceTree = "<group>"; };
+		2F99A960119E9B30005F3A9E /* AdMobDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobDelegateProtocol.h; sourceTree = "<group>"; };
+		2F99A961119E9B30005F3A9E /* AdMobView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobView.h; sourceTree = "<group>"; };
+		2F99A966119E9B44005F3A9E /* AdMobLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobLayer.h; sourceTree = "<group>"; };
+		2F99A967119E9B44005F3A9E /* AdMobLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdMobLayer.m; sourceTree = "<group>"; };
 		2FA8683E116CA06F009F3D8C /* SplashScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScene.h; sourceTree = "<group>"; };
 		2FA8683F116CA06F009F3D8C /* SplashScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScene.m; sourceTree = "<group>"; };
 		2FA8689C116CBE45009F3D8C /* DefaultRotate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultRotate.png; sourceTree = "<group>"; };
@@ -742,6 +759,9 @@
 				506EE1A91030508200A389B3 /* libcocos2d libraries.a in Frameworks */,
 				2F7DEE13116397F1004E947B /* libsqlite3.0.dylib in Frameworks */,
 				2F725769118876EF00B4FA3E /* StoreKit.framework in Frameworks */,
+				2F99A965119E9B30005F3A9E /* libAdMob.a in Frameworks */,
+				2F44A0CC119E9CE20071D347 /* MediaPlayer.framework in Frameworks */,
+				2F44A0CE119E9CE20071D347 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +781,7 @@
 				2F3E75A511998B4300F65F2D /* libcocos2d libraries.a in Frameworks */,
 				2F3E75A611998B4300F65F2D /* libsqlite3.0.dylib in Frameworks */,
 				2F3E75A711998B4300F65F2D /* StoreKit.framework in Frameworks */,
+				2F99A963119E9B30005F3A9E /* libAdMob.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,6 +801,7 @@
 				2F3E762D119991F700F65F2D /* libcocos2d libraries.a in Frameworks */,
 				2F3E762E119991F700F65F2D /* libsqlite3.0.dylib in Frameworks */,
 				2F3E762F119991F700F65F2D /* StoreKit.framework in Frameworks */,
+				2F99A962119E9B30005F3A9E /* libAdMob.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,6 +821,7 @@
 				2F443A8311919DC50058609F /* libcocos2d libraries.a in Frameworks */,
 				2F443A8411919DC50058609F /* libsqlite3.0.dylib in Frameworks */,
 				2F443A8511919DC50058609F /* StoreKit.framework in Frameworks */,
+				2F99A964119E9B30005F3A9E /* libAdMob.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -871,6 +894,8 @@
 				2F7DEE12116397F1004E947B /* libsqlite3.0.dylib */,
 				2F725768118876EF00B4FA3E /* StoreKit.framework */,
 				2F96597A1189BDD1008CE1E2 /* StoreKit.framework */,
+				2F44A0CB119E9CE20071D347 /* MediaPlayer.framework */,
+				2F44A0CD119E9CE20071D347 /* MessageUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -902,6 +927,8 @@
 				2FA8683F116CA06F009F3D8C /* SplashScene.m */,
 				2FB3DAD311871F530098ECD7 /* MyStoreObserver.h */,
 				2FB3DAD411871F530098ECD7 /* MyStoreObserver.m */,
+				2F99A966119E9B44005F3A9E /* AdMobLayer.h */,
+				2F99A967119E9B44005F3A9E /* AdMobLayer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -962,6 +989,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2F99A95E119E9B30005F3A9E /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				2F99A95F119E9B30005F3A9E /* libAdMob.a */,
+				2F99A960119E9B30005F3A9E /* AdMobDelegateProtocol.h */,
+				2F99A961119E9B30005F3A9E /* AdMobView.h */,
+			);
+			name = AdMob;
+			sourceTree = "<group>";
+		};
 		502BC3541120837500A0B92A /* CocosDenshion */ = {
 			isa = PBXGroup;
 			children = (
@@ -995,6 +1032,7 @@
 		506EDAA3102F461B00A389B3 /* cocos2d Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2F99A95E119E9B30005F3A9E /* AdMob */,
 				50D3B00911498A370002F919 /* cocos2d */,
 				502BC3541120837500A0B92A /* CocosDenshion */,
 				504DFBC710AF12E9006D82FE /* cocoslive */,
@@ -1581,6 +1619,7 @@
 				2FCCB9F3116B7D3E0000CC6A /* MenuLayer.m in Sources */,
 				2FA86840116CA06F009F3D8C /* SplashScene.m in Sources */,
 				2FB3DAD511871F530098ECD7 /* MyStoreObserver.m in Sources */,
+				2F99A96B119E9B44005F3A9E /* AdMobLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1617,6 +1656,7 @@
 				2F3E759811998B4300F65F2D /* MenuLayer.m in Sources */,
 				2F3E759911998B4300F65F2D /* SplashScene.m in Sources */,
 				2F3E759A11998B4300F65F2D /* MyStoreObserver.m in Sources */,
+				2F99A969119E9B44005F3A9E /* AdMobLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1653,6 +1693,7 @@
 				2F3E7620119991F700F65F2D /* MenuLayer.m in Sources */,
 				2F3E7621119991F700F65F2D /* SplashScene.m in Sources */,
 				2F3E7622119991F700F65F2D /* MyStoreObserver.m in Sources */,
+				2F99A968119E9B44005F3A9E /* AdMobLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1689,6 +1730,7 @@
 				2F443A7611919DC50058609F /* MenuLayer.m in Sources */,
 				2F443A7711919DC50058609F /* SplashScene.m in Sources */,
 				2F443A7811919DC50058609F /* MyStoreObserver.m in Sources */,
+				2F99A96A119E9B44005F3A9E /* AdMobLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1858,6 +1900,10 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -1884,6 +1930,10 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -1927,6 +1977,10 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -1972,6 +2026,10 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Resources/Info-universal.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -1999,6 +2057,10 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Resources/Info-universal.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -2026,6 +2088,10 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Resources/Info-universal.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -2057,6 +2123,10 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Resources/Info-universal.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_CFLAGS = (
 					"-DDEBUG=1",
 					"-DFREE=1",
@@ -2088,6 +2158,10 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Resources/Info-universal.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_CFLAGS = "-DFREE=1";
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -2116,6 +2190,10 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Resources/Info-universal.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_CFLAGS = "-DFREE=1";
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -2147,6 +2225,10 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_CFLAGS = (
 					"-DDEBUG=1",
 					"-DFREE=1",
@@ -2178,6 +2260,10 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_CFLAGS = "-DFREE=1";
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -2206,6 +2292,10 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_CFLAGS = "-DFREE=1";
 				OTHER_LDFLAGS = (
 					"-all_load",
