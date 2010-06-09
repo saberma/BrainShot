@@ -13,7 +13,8 @@
 #import "Position.h"
 #import <StoreKit/StoreKit.h> 
 
-@interface BallLayer : CCLayer < BallDelegate, UIAlertViewDelegate, SKProductsRequestDelegate>
+//@interface BallLayer : CCLayer < BallDelegate, UIAlertViewDelegate, SKProductsRequestDelegate>
+@interface BallLayer : CCLayer < BallDelegate>
 {
   NSMutableArray *balls;
   NSArray *positions;

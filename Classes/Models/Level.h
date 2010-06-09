@@ -17,6 +17,9 @@
 }
 @property (nonatomic, retain) NSNumber *current, *max, *iap;
 
++ (int)balls;
+//show time
++ (int)interval;
 //top level
 + (int)top;
 + (int)max;
@@ -27,6 +30,6 @@
 + (void)gotoMax;
 
 //iap level product identifier
-+ (NSString *)nextTopIdentifier;
+//+ (NSString *)nextTopIdentifier;
 
 @end

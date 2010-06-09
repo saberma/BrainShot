@@ -46,7 +46,7 @@
   NSMutableArray *tmpBalls = [[NSMutableArray alloc] init];
   NSMutableArray *tmpPositions = [self.positions mutableCopy];
   
-  for (int number=0; number<[Level current]; number++) {
+  for (int number=0; number<[Level balls]; number++) {
     int rand = arc4random() % [tmpPositions count];
     Position *position = [tmpPositions objectAtIndex:rand];
     [tmpPositions removeObjectAtIndex:rand];
@@ -59,7 +59,7 @@
   
   [tmpPositions release];
   [tmpBalls release];
-  [self schedule:@selector(hide:) interval:([Level current]  * 0.7f)];
+  [self schedule:@selector(hide:) interval:[Level interval]];
 }
 
 -(void) hide: (ccTime) dt
@@ -82,6 +82,7 @@
 -(void) nextLevel: (ccTime) dt
 {
   [self unschedule:_cmd];
+  /* cancle iap
   //check for iap
   BOOL allLevelPassed = [Level current] == [Level top];
 #ifdef DEBUG
@@ -94,8 +95,11 @@
   }else {
     [[CCDirector sharedDirector] replaceScene: [LevelScene node]];
   }
+   */
+  [[CCDirector sharedDirector] replaceScene: [LevelScene node]];
 }
 
+/*
 #pragma mark request delegate
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response{  
   SKPayment *payment = [SKPayment paymentWithProductIdentifier:[Level nextTopIdentifier]]; 
@@ -111,6 +115,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
   [[CCDirector sharedDirector] replaceScene: [LevelScene node]];
 }
+ */
 
 - (void)click: (Ball *) ball
 {
@@ -129,7 +134,7 @@
       [self schedule:@selector(restart:) interval:3.0f];
     }
   }else {
-    if ([ball number] == ([Level current] - 1)){
+    if ([ball number] == ([Level balls] - 1)){
       //play sound
       [[SimpleAudioEngine sharedEngine] playEffect:@"success.mp3"];
       CCSprite *pass = [CCSprite spriteWithFile:@"pass.png"];

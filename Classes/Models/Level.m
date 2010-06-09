@@ -12,6 +12,15 @@
 @implementation Level
 @synthesize current, max, iap;
 
++ (int)interval {
+  int part = [self current];
+  return 3.0f - 0.5 * ( part - (part % 10)) / 10 + 0.1 * (part % 10);
+}
+
++ (int)balls {
+  return [self current] % 10;
+}
+
 + (int)top
 {
   Level *level = [self get];
@@ -88,6 +97,7 @@
   [level save];
 }
 
+/*
 + (NSString *)nextTopIdentifier{
   NSString *productName = @"BrainShotx5";
 #ifdef FREE
@@ -95,6 +105,7 @@
 #endif
   return [NSString stringWithFormat:@"cn.com.cogentsoft.%@.level%d", productName, [Level top] + 10];
 }
+ */
 
 - (void)dealloc
 {

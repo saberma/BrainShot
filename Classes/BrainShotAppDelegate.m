@@ -54,8 +54,8 @@
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];  
   
   //support iap
-  MyStoreObserver *myStoreObserver = [[MyStoreObserver alloc] init];  
-  [[SKPaymentQueue defaultQueue] addTransactionObserver:myStoreObserver]; 
+  //MyStoreObserver *myStoreObserver = [[MyStoreObserver alloc] init];  
+  //[[SKPaymentQueue defaultQueue] addTransactionObserver:myStoreObserver]; 
   
 }
 

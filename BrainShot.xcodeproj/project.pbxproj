@@ -215,6 +215,8 @@
 		2FCCB92D116B6BFE0000CC6A /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FCCB92B116B6BFE0000CC6A /* success.mp3 */; };
 		2FCCB937116B76190000CC6A /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCCB936116B76190000CC6A /* MenuScene.m */; };
 		2FCCB9F3116B7D3E0000CC6A /* MenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCCB9F2116B7D3E0000CC6A /* MenuLayer.m */; };
+		2FD1658111A2DA62007A2BCE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD1658011A2DA62007A2BCE /* MediaPlayer.framework */; };
+		2FD1658311A2DA62007A2BCE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD1658211A2DA62007A2BCE /* MessageUI.framework */; };
 		502BC35D1120837500A0B92A /* CDAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 502BC3551120837500A0B92A /* CDAudioManager.h */; };
 		502BC35E1120837500A0B92A /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 502BC3561120837500A0B92A /* CDAudioManager.m */; };
 		502BC35F1120837500A0B92A /* CDConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 502BC3571120837500A0B92A /* CDConfig.h */; };
@@ -543,6 +545,8 @@
 		2FCCB936116B76190000CC6A /* MenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScene.m; sourceTree = "<group>"; };
 		2FCCB9F1116B7D3E0000CC6A /* MenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuLayer.h; sourceTree = "<group>"; };
 		2FCCB9F2116B7D3E0000CC6A /* MenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuLayer.m; sourceTree = "<group>"; };
+		2FD1658011A2DA62007A2BCE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		2FD1658211A2DA62007A2BCE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		502BC3551120837500A0B92A /* CDAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAudioManager.h; sourceTree = "<group>"; };
 		502BC3561120837500A0B92A /* CDAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAudioManager.m; sourceTree = "<group>"; };
 		502BC3571120837500A0B92A /* CDConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDConfig.h; sourceTree = "<group>"; };
@@ -782,6 +786,8 @@
 				2F3E75A611998B4300F65F2D /* libsqlite3.0.dylib in Frameworks */,
 				2F3E75A711998B4300F65F2D /* StoreKit.framework in Frameworks */,
 				2F99A963119E9B30005F3A9E /* libAdMob.a in Frameworks */,
+				2FD1658111A2DA62007A2BCE /* MediaPlayer.framework in Frameworks */,
+				2FD1658311A2DA62007A2BCE /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +902,8 @@
 				2F96597A1189BDD1008CE1E2 /* StoreKit.framework */,
 				2F44A0CB119E9CE20071D347 /* MediaPlayer.framework */,
 				2F44A0CD119E9CE20071D347 /* MessageUI.framework */,
+				2FD1658011A2DA62007A2BCE /* MediaPlayer.framework */,
+				2FD1658211A2DA62007A2BCE /* MessageUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
